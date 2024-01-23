@@ -1,0 +1,13 @@
+log
+.vscode
+src/adapt_livtrac
+src/adapt_sposel
+src/adapt_obj
+src/adapt_envmod
+src/adapt_envmod
+src/adapt_latlongcon
+src/adapt_ui
+src/adapt_loc
+src/adapt_lanboun
+src/adapt_behplan
+src/adapt_roucomp
