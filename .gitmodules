@@ -1,0 +1,30 @@
+[submodule "src/adapt_livtrac"]
+	path = src/adapt_livtrac
+	url = https://git.hs-coburg.de/ADAPT/adapt_livtrac.git
+[submodule "src/adapt_sposel"]
+	path = src/sadapt_sposel
+	url = https://git.hs-coburg.de/ADAPT/adapt_sposel.git
+[submodule "src/adapt_obj"]
+	path = src/adapt_obj
+	url = https://git.hs-coburg.de/ADAPT/adapt_obj.git
+[submodule "src/adapt_envmod"]
+	path = src/adapt_envmod
+	url = https://git.hs-coburg.de/ADAPT/adapt_envmod.git
+[submodule "src/adapt_latlongcon"]
+	path = src/adapt_latlongcon
+	url = https://git.hs-coburg.de/ADAPT/adapt_latlongcon.git
+[submodule "src/adapt_ui"]
+	path = src/adapt_ui
+	url = https://git.hs-coburg.de/ADAPT/adapt_ui.git
+[submodule "src/adapt_loc"]
+	path = src/adapt_loc
+	url = https://git.hs-coburg.de/ADAPT/adapt_loc.git
+[submodule "src/adapt_lanboun"]
+	path = src/adapt_lanboun
+	url = https://git.hs-coburg.de/ADAPT/adapt_lanboun.git
+[submodule "src/adapt_behplan"]
+	path = src/adapt_behplan
+	url = https://git.hs-coburg.de/ADAPT/adapt_behplan.git
+[submodule "src/adapt_roucomp"]
+	path = src/adapt_roucomp
+	url = https://git.hs-coburg.de/ADAPT/adapt_roucomp.git
