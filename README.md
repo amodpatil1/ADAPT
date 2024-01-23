@@ -45,7 +45,16 @@ and overall effective operation in diverse driving conditions. Without accurate 
 > :memo: **Note:** Repository named as **"adapt_lanboun"**.  
 ## [Object Detection](https://git.hs-coburg.de/ADAPT/adapt_obj)
 The object detection algorithms use visual data such as images, videos, and laser scan points to analyze and identify objects' locations. Identifying and understanding the surrounding environment is essential for safe vehicle navigation and parking. As a result, the information produced by the object detection process is provided to the Environment model.
-> :memo: **Note:** Repository named as **"adapt_obj"**.  
+> :memo: **Note:** Repository named as **"adapt_obj"**. 
+## [Transmitter](https://git.hs-coburg.de/ADAPT/adapt_trnsmtr)
+
+> :memo: **Note:** Repository named as **"adapt_trnsmtr"**. 
+## [Parking spot compatibility and availibility checker](https://git.hs-coburg.de/ADAPT/adapt_psc_ac)
+
+> :memo: **Note:** Repository named as **"adapt_psc_ac"**.
+## [Parking spot updater](https://git.hs-coburg.de/ADAPT/adapt_spotupd)
+
+> :memo: **Note:** Repository named as **"adapt_spotupd"**.
 ## Initial setup
 ```bash
 cd adapt_main
