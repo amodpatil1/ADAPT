@@ -49,6 +49,12 @@ The object detection algorithms use visual data such as images, videos, and lase
 ## [Transmitter](https://git.hs-coburg.de/ADAPT/adapt_trnsmtr)
 
 > :memo: **Note:** Repository named as **"adapt_trnsmtr"**. 
+## [Parking spot compatibility and availibility checker](https://git.hs-coburg.de/ADAPT/adapt_psc_ac)
+
+> :memo: **Note:** Repository named as **"adapt_psc_ac"**.
+## [Parking spot updater](https://git.hs-coburg.de/ADAPT/adapt_spotupd)
+
+> :memo: **Note:** Repository named as **"adapt_spotupd"**.
 ## Initial setup
 ```bash
 cd adapt_main
