@@ -1,0 +1,41 @@
+repositories:
+  adapt_ui:
+    type: git
+    url: https://git.hs-coburg.de/ADAPT/adapt_ui.git
+    version: main
+  adapt_obj:
+    type: git
+    url: https://git.hs-coburg.de/ADAPT/adapt_obj.git
+    version: main
+  adapt_livtrac:
+    type: git
+    url: https://git.hs-coburg.de/ADAPT/adapt_livtrac.git
+    version: main
+  adapt_lanboun:
+    type: git
+    url: https://git.hs-coburg.de/ADAPT/adapt_lanboun.git
+    version: main
+  adapt_loc:
+    type: git
+    url: https://git.hs-coburg.de/ADAPT/adapt_loc.git
+    version: main 
+  adapt_roucomp:
+    type: git
+    url: https://git.hs-coburg.de/ADAPT/adapt_roucomp.git
+    version: main
+  adapt_latlongcon:
+    type: git
+    url: https://git.hs-coburg.de/ADAPT/adapt_latlongcon.git
+    version: main
+  adapt_behplan:
+    type: git
+    url: https://git.hs-coburg.de/ADAPT/adapt_bahplan.git
+    version: main
+  adapt_envmod:
+    type: git
+    url: https://git.hs-coburg.de/ADAPT/adapt_envmod.git
+    version: main
+    adapt_sposel:
+    type: git
+    url: https://git.hs-coburg.de/ADAPT/adapt_sposel.git
+    version: main
