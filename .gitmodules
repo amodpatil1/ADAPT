@@ -28,13 +28,3 @@
 [submodule "src/adapt_roucomp"]
 	path = src/adapt_roucomp
 	url = https://git.hs-coburg.de/ADAPT/adapt_roucomp.git
-[submodule "src/adapt_trnsmtr"]
-	path = src/adapt_trnsmtr
-	url = https://git.hs-coburg.de/ADAPT/adapt_trnsmtr.git
-[submodule "src/adapt_psc_ac"]
-	path = src/adapt_psc_ac
-	url = https://git.hs-coburg.de/ADAPT/adapt_psc_ac.git
-[submodule "src/adapt_spotupd"]
-	path = src/adapt_spotupd
-	url = https://git.hs-coburg.de/ADAPT/adapt_spotupd.git
-
