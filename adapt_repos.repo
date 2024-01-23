@@ -29,7 +29,7 @@ repositories:
     version: main
   adapt_behplan:
     type: git
-    url: https://git.hs-coburg.de/ADAPT/adapt_bahplan.git
+    url: https://git.hs-coburg.de/ADAPT/adapt_behplan.git
     version: main
   adapt_envmod:
     type: git
