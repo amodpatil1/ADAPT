@@ -35,7 +35,7 @@ repositories:
     type: git
     url: https://git.hs-coburg.de/ADAPT/adapt_envmod.git
     version: main
-    adapt_sposel:
+  adapt_sposel:
     type: git
     url: https://git.hs-coburg.de/ADAPT/adapt_sposel.git
     version: main
