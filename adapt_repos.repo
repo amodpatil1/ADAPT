@@ -39,7 +39,7 @@ repositories:
     type: git
     url: https://git.hs-coburg.de/ADAPT/adapt_sposel.git
     version: main
-   adapt_trnsmtr:
+  adapt_trnsmtr:
     type: git
     url: https://git.hs-coburg.de/ADAPT/adapt_trnsmtr.git
     version: main
