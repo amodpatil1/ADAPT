@@ -51,3 +51,11 @@ repositories:
     type: git
     url: https://git.hs-coburg.de/ADAPT/adapt_spotupd.git
     version: main
+  v2x:
+    type: git
+    url: https://git.hs-coburg.de/Autonomous_Driving/v2x.git
+    version: master
+  ros_deep_learning:
+    type: github
+    url: https://github.com/dusty-nv/ros_deep_learning.git
+    version: master
