@@ -17,5 +17,12 @@ def generate_launch_description():
             executable='route_node',
             name='roucomp'
             
-        ),   
+        ),
+        Node(
+            package='adapt_ui',
+            namespace='ui1',
+            executable='show',
+            name='Pubsub1'
+        ),
+   
     ])
