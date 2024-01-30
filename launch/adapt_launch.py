@@ -24,10 +24,8 @@ def generate_launch_description():
             executable='show',
             name='Pubsub1'
         ),
-   
-    ])
-
  
+        
         Node(
             package='adapt_behplan',
             namespace='behaviour',
