@@ -66,5 +66,5 @@ repositories:
   adapt_msgs
     type: git
     url: https://git.hs-coburg.de/ADAPT/adapt_msgs.git 
-    version: master   
+    version: main   
    
