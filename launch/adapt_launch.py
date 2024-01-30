@@ -9,6 +9,7 @@ def generate_launch_description():
             name='adapt_envmod'
             
         ),
+        Node(
             package='adapt_roucomp',
             executable='route_node',
             name='roucomp' 
