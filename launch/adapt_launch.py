@@ -4,14 +4,18 @@ from launch_ros.actions import Node
 def generate_launch_description():
     return LaunchDescription([
         Node(
-            package='adapt_envmod',
-            executable='env_node',
-            name='adapt_envmod'
+            package='adapt_envmod',  #your package name
+            namespace='environment', #custom     
+            executable='env_node',   #the entry point
+            name= 'envmod'           # Node name
             
         ),
+        
         Node(
             package='adapt_roucomp',
+            namespace='routecomputer', 
             executable='route_node',
-            name='roucomp' 
+            name='roucomp'
+            
         ),   
     ])
