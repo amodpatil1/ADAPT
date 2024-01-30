@@ -31,13 +31,20 @@ def generate_launch_description():
             namespace='behaviour',
             executable='behaviour_node',
             name='behplan'
-        )
+        ),
 
         Node(
-            package='adapt_trnsmtr',  #your package name
-            namespace='transmitter', #custom     
-            executable='trnsmtr_node',   #the entry point
-            name= 'trnsmtr_data'           # Node name
+            package='adapt_trnsmtr', 
+            namespace='transmitter',  
+            executable='trnsmtr_node',  
+            name= 'trnsmtr_data'          
             
         ),
+        Node(
+            package='adapt_latlongcon',  
+            namespace='control',            
+            executable='latlong_node',   
+            name= 'latlongcon'           
+            
+        )
     ])
