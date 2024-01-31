@@ -28,7 +28,6 @@ def generate_launch_description():
         
         Node(
             package='adapt_behplan',
-            namespace='behaviour',
             executable='behaviour_node',
             name='behplan'
         ),
