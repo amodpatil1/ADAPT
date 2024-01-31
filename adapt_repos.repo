@@ -59,10 +59,6 @@ repositories:
     type: git
     url: https://github.com/dusty-nv/ros_deep_learning.git
     version: master
-  vision_msgs:
-    type: git
-    url: https://github.com/ros-perception/vision_msgs.git
-    version: ros2
   adapt_msgs:
     type: git
     url: https://git.hs-coburg.de/ADAPT/adapt_msgs.git 
