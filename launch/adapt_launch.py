@@ -4,23 +4,23 @@ from launch_ros.actions import Node
 def generate_launch_description():
     return LaunchDescription([
         Node(
-            package='adapt_envmod',  #your package name
-            namespace='environment', #custom     
-            executable='env_node',   #the entry point
-            name= 'envmod'           # Node name
+            package='adapt_envmod',  
+            
+            executable='env_node',   
+            name= 'envmod'           
             
         ),
         
         Node(
             package='adapt_roucomp',
-            namespace='routecomputer', 
+            
             executable='route_node',
             name='roucomp'
             
         ),
         Node(
             package='adapt_ui',
-            namespace='ui1',
+            
             executable='show',
             name='Pubsub1'
         ),
@@ -34,14 +34,14 @@ def generate_launch_description():
 
         Node(
             package='adapt_trnsmtr', 
-            namespace='transmitter',  
+             
             executable='trnsmtr_node',  
             name= 'trnsmtr_data'          
             
         ),
         Node(
             package='adapt_latlongcon',  
-            namespace='control',            
+                        
             executable='latlong_node',   
             name= 'latlongcon'           
             
