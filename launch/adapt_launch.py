@@ -48,8 +48,7 @@ def generate_launch_description():
             
         )
                 Node(
-            package='adapt_lanboun',  
-            namespace='lanedetect',            
+            package='adapt_lanboun',           
             executable='lane_detection_node',   
             name= 'lane_detection'           
             
