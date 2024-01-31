@@ -35,8 +35,8 @@ def generate_launch_description():
         Node(
             package='adapt_trnsmtr', 
              
-            executable='trnsmtr_node',  
-            name= 'trnsmtr_data'          
+            executable='transmitter_node',  
+            name= 'transmitter_data'          
             
         ),
         Node(
