@@ -22,7 +22,7 @@ def generate_launch_description():
             package='adapt_ui',
             
             executable='show',
-            name='Pubsub1'
+            name='UI_1'
         ),
  
         
