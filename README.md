@@ -100,7 +100,7 @@ and overall effective operation in diverse driving conditions. Without accurate 
 | In/Out  | Topic Name                        | Message Type | Description                          |
 |---------|-----------------------------------|--------------|--------------------------------------|
 | Input   | /camera/image_raw                 | Image        | Image frames from realsense camera    |
-| Output  | /lane_detection/lane_info         | Float64MultiArray  | Detected lane information to Environmental model component     |
+| Output  | /lane_detection/lane_info         | LaneInfo  | Detected lane information to Environmental model component     |
 
 > :memo: **Note:** Repository named as **"adapt_lanboun"**.  
 ## [Object Detection](https://git.hs-coburg.de/ADAPT/adapt_obj)
