@@ -47,7 +47,7 @@ def generate_launch_description():
             name= 'latlongcon'           
             
         )
-                Node(
+        Node(
             package='adapt_lanboun',           
             executable='lane_detection_node',   
             name= 'lane_detection'           
