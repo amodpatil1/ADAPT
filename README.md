@@ -1,16 +1,16 @@
 # ADAPT OVERVIEW
 #### Welcome to the main repository of **ADAPT** System. This repository will help you navigate through our orgnization repositories and hopefully provide a comprehensive understanding of the system architecture and breifly describe components functionality.
 
-# Architecture v1.0
+# Architecture v2.0
 For a better understanding, we have splited our architecture into 2 blocks diagrams, one for the **Infrastructre** and one for **Ego-Vehicle**. These two parts will communicate with each other through **V2X** communication.
 
 ## Infrastructre Block Diagram
 
-![Infrastructre Block Diagram](/images/infra_architecture.jpg "Infrastructre")
+![Infrastructre Block Diagram](/images/infra-archi.png "Infrastructre")
 
 ## Ego-Vehicle Block Diagram
 
-![Ego-Vehicle Block Diagram](/images/av_architecture.jpg "Ego-Vehicle")
+![Ego-Vehicle Block Diagram](/images/ev-archi.png "Ego-Vehicle")
 
 # Components and Functionality:
 
