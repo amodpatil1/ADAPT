@@ -80,17 +80,18 @@ In our system, the EV receives a list of available parking spot from the infrast
 After the User arrives at the destination and commands the system to park the vehicle using the User Interface of the Ego Vehicle depending on the preferences (Shortest route, Fastest route..etc). The User Interface receives the input from the User and localization component to provide the output to transmitter for sharing the information with the Infrastructure.
 > :memo: **Note:** Repository named as **"adapt_ui"**.  
 ## [Localization](https://git.hs-coburg.de/ADAPT/adapt_loc)
-The localization component provides a precise location of the Ego-Vehicle with respect to its environment after taking the input data from the perception sensors, the stored Digital Maps and the coordinates from the GNSS.
+The localization component provides a precise location of the Ego-Vehicle with respect to its environment after taking the input data from the perception sensors, the stored Digital Maps and the coordinates from the GNSS. Currently only set up for working with the OptiTrack system in the model city.
 
+## Component Interfaces
 | **In/Out** | **Topic Name**| **Message Type** | **Description** | 
 | --------- | ---------- | ---------- | ----------- |
-| Input | camera/image_raw | Image | Image data from RealSense camera |
-| Input | PointCloud2 | PointCloud2 | LiDar detections |
+| Input | camera/image_raw | Image | Image data from RealSense camera (not being used for now) | 
+| Input | PointCloud2 | PointCloud2 | LiDar detections (not being used for now) | 
 | Input | sensor_msgs/LaserScan | LaserScan | Radar detections (Will be updated) |
 | Input | sensor_msgs/msgs/NavSatFix | PointStamped | Positioning data from GNSS (Will be updated) |
 | Input | Map_data | Static Map | External Maps stored within the system (Will be updated) |
 | Input | /rigid_bodies | RigidBodies | Input from Optitrack System to work in the Model city |
-| Output | /loc_pose | Pose | Vehicle Pose |
+| Output | /loc_pose | PoseStamped | Vehicle Pose |
 
 > :memo: **Note:** Repository named as **"adapt_loc"**.  
 ## [Lane and Boundary Detection](https://git.hs-coburg.de/ADAPT/adapt_lanboun)
