@@ -39,9 +39,9 @@ repositories:
     type: git
     url: https://git.hs-coburg.de/ADAPT/adapt_spotsl.git
     version: main
-  adapt_trnsmtr:
+  adapt_transmitter:
     type: git
-    url: https://git.hs-coburg.de/ADAPT/adapt_trnsmtr.git
+    url: https://git.hs-coburg.de/ADAPT/adapt_transmitter.git
     version: main
   adapt_psc_ac:
     type: git
