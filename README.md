@@ -2,7 +2,7 @@
 #### Welcome to the main repository of **ADAPT** System. This repository will help you navigate through our orgnization repositories and hopefully provide a comprehensive understanding of the system architecture and breifly describe components functionality.
 
 # Architecture v2.0
-For a better understanding, we have splited our architecture into 2 blocks diagrams, one for the **Infrastructre** and one for **Ego-Vehicle**. These two parts will communicate with each other through **V2X** communication.
+For a better understanding, we have split our architecture into 2 blocks diagrams, one for the **Infrastructre** and one for **Ego-Vehicle**. These two parts will communicate with each other through **V2X** communication.
 
 ## Infrastructre Block Diagram
 
@@ -86,10 +86,10 @@ The localization component provides a precise location of the Ego-Vehicle with r
 | **In/Out** | **Topic Name**| **Message Type** | **Description** | 
 | --------- | ---------- | ---------- | ----------- |
 | Input | camera/image_raw | Image | Image data from RealSense camera (not being used for now) | 
-| Input | PointCloud2 | PointCloud2 | LiDar detections (not being used for now) | 
-| Input | sensor_msgs/LaserScan | LaserScan | Radar detections (Will be updated) |
-| Input | sensor_msgs/msgs/NavSatFix | PointStamped | Positioning data from GNSS (Will be updated) |
-| Input | Map_data | Static Map | External Maps stored within the system (Will be updated) |
+| Input | PointCloud2 | LaserScan | LiDar detections (not being used for now) | 
+| Input | sensor_msgs/LaserScan | LaserScan | Radar detections (not being used for now)(Will be updated) |
+| Input | sensor_msgs/msgs/NavSatFix | PointStamped | Positioning data from GNSS (not being used for now)(Will be updated) |
+| Input | Map_data | Static Map | External Maps stored within the system (not being used for now)(Will be updated) |
 | Input | /rigid_bodies | RigidBodies | Input from Optitrack System to work in the Model city |
 | Output | /loc_pose | PoseStamped | Vehicle Pose |
 
