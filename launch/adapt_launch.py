@@ -21,7 +21,7 @@ def generate_launch_description():
         Node(
             package='adapt_ui',
             
-            executable='show',
+            executable='ui1_node',
             name='UI_1'
         ),
  
