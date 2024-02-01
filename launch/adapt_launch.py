@@ -45,11 +45,16 @@ def generate_launch_description():
             executable='latlong_node',   
             name= 'latlongcon'           
             
-        )
+        ),
         Node(
             package='adapt_lanboun',           
             executable='lane_detection_node',   
             name= 'lane_detection'           
             
+        ),           
+        Node(
+            package='adapt_loc',
+            executable='localization',
+            name='localization'
         )
     ])
