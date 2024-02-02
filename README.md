@@ -127,7 +127,7 @@ The transmitter is responsible for sending and receiving messages from the EV to
 | Output | /cam_data | |It is responsible for publishing the CAM messages for V2X application|
 | Output | /cpm_data | |It is responsible for publishing the CPM messages for V2X application|
 
-> :memo: **Note:** Repository named as **"adapt_trnsmtr"**. 
+> :memo: **Note:** Repository named as **"adapt_transmitter"**. 
 ## [Parking spot compatibility and availibility checker](https://git.hs-coburg.de/ADAPT/adapt_psc_ac)
 
 > :memo: **Note:** Repository named as **"adapt_psc_ac"**.
