@@ -77,7 +77,27 @@ In our system, the EV receives a list of available parking spot from the infrast
 
 > :memo: **Note:** Repository named as **"adapt_sposel"**.  
 ## [User Interface](https://git.hs-coburg.de/ADAPT/adapt_ui)
-After the User arrives at the destination and commands the system to park the vehicle using the User Interface of the Ego Vehicle depending on the preferences (Shortest route, Fastest route..etc). The User Interface receives the input from the User and localization component to provide the output to transmitter for sharing the information with the Infrastructure.
+USER INTERFACE 1:
+The User Interface 1 is the primary interaction of the User with the ADAPT. The User Interface 1 aids the user to input their Information to the system and then give command to park the vehicle, which inturn initializes the system. It is present in the Ego Vehicle.
+
+USER INTERFACE 2:
+The User Interface 2 (present on user's hand) aids the User to track the location of the Ego vehicle at all times also it displays the location where the Ego vehicle is going to be parked.
+
+## UI 1
+| In/Out | Topic Name| Message Type | Description | 
+| --------- | ---------- | ---------- | ----------- |
+| Input | /info_info | string | The occupant_info for creating Unique ID |
+| Input | /loc_pose | geometry_msgs/Pose | The current position of Ego vehicle (EV) |
+| Input | /selected_spot_location | v2x/msg/evcsn-ts101556-1/ItsChargingStationData | The selected parking spot for the EV.|
+| Output | /spot_location | v2x/msg/evcsn-ts101556-1/ItsChargingStationData | The location of the selected spot to park.|
+| Output | /occupant_info| string | The information of occupant details, selected parking spot and EV location.|
+
+## UI 2
+| In/Out | Topic Name| Message Type | Description | 
+| --------- | ---------- | ---------- | ----------- |
+| Input | /live_loc| geometry_msgs/Pose | The location of the EV |
+| Output | /display| geometry_msgs/Pose | The continous tracked location of the EV.|
+
 > :memo: **Note:** Repository named as **"adapt_ui"**.  
 ## [Localization](https://git.hs-coburg.de/ADAPT/adapt_loc)
 The localization component provides a precise location of the Ego-Vehicle with respect to its environment after taking the input data from the perception sensors, the stored Digital Maps and the coordinates from the GNSS. Currently only set up for working with the OptiTrack system in the model city.
