@@ -85,18 +85,18 @@ The User Interface 2 (present on user's hand) aids the User to track the locatio
 
 ## UI 1
 | In/Out | Topic Name| Message Type | Description | 
-| --------- | ---------- | ---------- | ----------- |
+| --------- | ------------ | ---------- | ----------- |
 | Input | /info_info | string | The occupant_info for creating Unique ID |
-| Input | /loc_pose | geometry_msgs/Pose | The current position of Ego vehicle (EV) |
-| Input | /selected_spot_location | v2x/msg/evcsn-ts101556-1/ItsChargingStationData | The selected parking spot for the EV.|
-| Output | /spot_location | v2x/msg/evcsn-ts101556-1/ItsChargingStationData | The location of the selected spot to park.|
+| Input | /loc_pose | PoseStamped | The current position of Ego vehicle (EV) |
+| Input | /selected_spot_location | PoseStamped| The selected parking spot for the EV.|
+| Output | /spot_location | PoseStamped | The location of the selected spot to park.|
 | Output | /occupant_info| string | The information of occupant details, selected parking spot and EV location.|
 
 ## UI 2
 | In/Out | Topic Name| Message Type | Description | 
 | --------- | ---------- | ---------- | ----------- |
-| Input | /live_loc| geometry_msgs/Pose | The location of the EV |
-| Output | /display| geometry_msgs/Pose | The continous tracked location of the EV.|
+| Input | /live_loc| PoseStamped | The location of the EV |
+| Output | /display| PoseStamped | The continous tracked location of the EV.|
 
 > :memo: **Note:** Repository named as **"adapt_ui"**.  
 ## [Localization](https://git.hs-coburg.de/ADAPT/adapt_loc)
