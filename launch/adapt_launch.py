@@ -56,5 +56,10 @@ def generate_launch_description():
             package='adapt_loc',
             executable='localization',
             name='localization'
+        ),
+        Node(
+            package='adapt_spotsl',
+            executable='spotsl_node',
+            name='spotsl'
         )
     ])
