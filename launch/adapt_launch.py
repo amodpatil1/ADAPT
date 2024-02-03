@@ -62,4 +62,9 @@ def generate_launch_description():
             executable='spotsl_node',
             name='spotsl'
         )
+        Node(
+            package='adapt_livtrac',
+            executable='livetrac_node',
+            name='livetracker'
+        )
     ])
