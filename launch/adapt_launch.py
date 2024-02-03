@@ -5,22 +5,19 @@ def generate_launch_description():
     return LaunchDescription([
         Node(
             package='adapt_envmod',  
-            
             executable='env_node',   
             name= 'envmod'           
             
         ),
         
         Node(
-            package='adapt_roucomp',
-            
+            package='adapt_roucomp', 
             executable='route_node',
             name='roucomp'
             
         ),
         Node(
-            package='adapt_ui',
-            
+            package='adapt_ui', 
             executable='ui1_node',
             name='UI_1'
         ),
@@ -33,15 +30,13 @@ def generate_launch_description():
         ),
 
         Node(
-            package='adapt_trnsmtr', 
-             
+            package='adapt_transmitter',     
             executable='transmitter_node',  
             name= 'transmitter_data'          
             
         ),
         Node(
-            package='adapt_latlongcon',  
-                        
+            package='adapt_latlongcon',             
             executable='latlong_node',   
             name= 'latlongcon'           
             
@@ -61,10 +56,16 @@ def generate_launch_description():
             package='adapt_spotsl',
             executable='spotsl_node',
             name='spotsl'
-        )
+        ),
         Node(
             package='adapt_livtrac',
             executable='livetrac_node',
             name='livetracker'
-        )
+        ),
+        Node(
+            package='adapt_latlongcon',
+            executable='latlong',
+            name='latlong_node'
+        ),
+
     ])
