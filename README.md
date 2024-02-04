@@ -12,8 +12,17 @@ For a better understanding, we have split our architecture into 2 blocks diagram
 
 ![Ego-Vehicle Block Diagram](/images/ev-archi.png "Ego-Vehicle")
 
-# Components and Functionality:
+## [Acivity Diagram ](https://git.hs-coburg.de/ADAPT/adapt_main/src/branch/main/images/activity_diagram.png)
+An Activity Diagram is a behavioral UML diagram that represents the flow of actions or activities within a system or process. It visualizes the workflow or process of ADAPT. It highlights the sequence of steps the vehicle follows and decision points.
+> :memo: **Note:** Diagram is named **Acivity Diagram** the `images` folder. 
+## [State Diagram ](https://git.hs-coburg.de/ADAPT/adapt_main/src/branch/main/images/activity_diagram.png)
+Represents the various states an autonomous vehicle can be in within the parking process (e.g., searching for a spot, parking, and parked) and the events that trigger transitions between these states.
+> :memo: **Note:** Diagram is named **State Diagram** the `images` folder. 
+## [Sequence  Diagram ](https://git.hs-coburg.de/ADAPT/adapt_main/src/branch/main/images/activity_diagram.png)
+A Sequence Diagram is a behavioral UML diagram that illustrates how objects interact with each other in a particular sequence of messages over time. It focuses on representing the order and conditions under which messages are sent and received between objects, making it ideal for detailing specific scenarios of use cases. 
+> :memo: **Note:** Diagram is named **Sequence Diagram** the `images` folder. 
 
+# Components and Functionality:
 
 ## [Lateral and Longitude Control](https://git.hs-coburg.de/ADAPT/adapt_latlongcon)
 The lateral and longitudinal control refers to steering and speed management: lateral control governs side-to-side steering for lane positioning, while longitudinal control manages forward and backward motion, including acceleration and deceleration.
@@ -165,3 +174,4 @@ Parking spot updater updates the parking spot list in the Infrastructure data ba
 ```bash
 cd adapt_main
 vcs import src < adapt_repos.repo
+```
