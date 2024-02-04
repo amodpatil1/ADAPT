@@ -4,12 +4,10 @@
 # Architecture v2.0
 For a better understanding, we have split our architecture into 2 blocks diagrams, one for the **Infrastructre** and one for **Ego-Vehicle**. These two parts will communicate with each other through **V2X** communication.
 
-## Infrastructre Block Diagram
-
+## [Infrastructre Block Diagram ](https://git.hs-coburg.de/ADAPT/adapt_main/src/branch/main/images/infra-archi.png)
 ![Infrastructre Block Diagram](/images/infra-archi.png "Infrastructre")
 
-## Ego-Vehicle Block Diagram
-
+## [Ego-Vehicle Block Diagram ](https://git.hs-coburg.de/ADAPT/adapt_main/src/branch/main/images/ev-archi.png)
 ![Ego-Vehicle Block Diagram](/images/ev-archi.png "Ego-Vehicle")
 
 ## [Acivity Diagram ](https://git.hs-coburg.de/ADAPT/adapt_main/src/branch/main/images/activity_diagram.png)
