@@ -146,11 +146,13 @@ The transmitter is responsible for sending and receiving messages from the EV to
 
 | In/Out | Topic Name| Message Type | Description | 
 | --------- | ---------- | ---------- | ----------- |
-| Input | /occupant_info| |The information of occupant details, selected parking spot and vehicle location  |
-| Input | /vehicle_location| geometry_msgs/Pose | The current location of the EV.|
-| Input | /Detection| vision_msgs/Detection2DArray | The objection detection list to Infrastructure |
-| Input | /lane_detection/lane_info | String | Detected lane information to environmental model Component|
-| Output | /data_list|  | The information of occupant details, selected parking spot and vehicle location|
+| Input | /occupant_info| String |The details of the user.|
+| Input | /loc_pose| PoseStamped | The initial location of the EV.|
+| Input | /detectnet/detctions| Detection2DArray | The objection detection list to Infrastructure |
+| Input | /selected_spot_location| PoseStamped | The objection detection list to Infrastructure |
+| Output | /ev_location| PoseStamped | The initial location of the EV|
+| Output | /selected_spot| PoseStamped | The selected parking location.|
+| Output | /user_info| String  | The details of the user.|
 | Output | /cam_data | |It is responsible for publishing the CAM messages for V2X application|
 | Output | /cpm_data | |It is responsible for publishing the CPM messages for V2X application|
 
