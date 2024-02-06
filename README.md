@@ -54,7 +54,7 @@ This sequence diagram illustrates the communication flow between the autonomous 
 # Components and Functionality:
 #### This section will be devided into 3 parts accoring to the Architecture as Sense, Plan, and Act.
 ## 1. Sense 
-### [Parking Spot Selector](https://git.hs-coburg.de/ADAPT/adapt_sposel)
+### [Parking Spot Selector](https://git.hs-coburg.de/ADAPT/adapt_spotsl)
 In our system, the EV receives a list of available parking spot from the infrastructure’s database then the Spot Selection component selects a most suitable parking spot based on predefined user preferences in UI
 
 | **In/Out** | **Topic Name**| **Message Type** | **Description** |
@@ -248,7 +248,7 @@ The following table shows task and component allocation between team members bas
 | Object Detection | [adapt_obj](https://git.hs-coburg.de/ADAPT/adapt_obj) | Ibrahim Al Dabbagh, Amod Patil |
 | Parking Spot Compatibility and Availability Checker | [adapt_psc_ac](https://git.hs-coburg.de/ADAPT/adapt_psc_ac) | Harshawardhan Patil |
 | Route Computer | [adapt_roucomp](https://git.hs-coburg.de/ADAPT/adapt_roucomp) | Riddhesh Dalvi |
-| Parking Spot Selector | [adapt_spotsl](https://git.hs-coburg.de/ADAPT/adapt_sposel) | Ritwik Ranjit, Riddhesh Dalvi, Amod Patil |
+| Parking Spot Selector | [adapt_spotsl](https://git.hs-coburg.de/ADAPT/adapt_spotsl) | Ritwik Ranjit, Riddhesh Dalvi, Amod Patil |
 | Parking Spot Updater | [adapt_spotupd](https://git.hs-coburg.de/ADAPT/adapt_spotupd) | Amod Patil |
 | Transmitter | [adapt_transmitter](https://git.hs-coburg.de/ADAPT/adapt_trnsmtr) | Ritwik Ranjit |
 | User Interface | [adapt_ui](https://git.hs-coburg.de/ADAPT/adapt_ui) | Ritwik Ranjit |
