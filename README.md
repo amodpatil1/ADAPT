@@ -167,7 +167,7 @@ The Environmental Model is a critical component in the architecture of autonomou
 | --------- | ---------- | ---------- | ----------- |
 | Input | /detectnet/detections| Detection2DArray | The detectnet detections |
 | Input | /loc_pose| PoseStamped | The current position of our vehicle |
-| Input  | /lane_detection/lane_info         | Float64MultiArray  | Detected lane information to Environmental model component     |
+| Input  | /lane_detection/lane_info         | LaneInfo | Detected lane information to Environmental model component     |
 | Output | /complete_model| OcupancyGrid | Complete model of where the vehicle is located with respect to its environment|
 
 > :memo: **Note:** Repository named as **"adapt_envmod"**.  
