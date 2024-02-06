@@ -249,7 +249,7 @@ The following table shows task and component allocation between team members bas
 | Behaviour Planning | [adapt_behplan](https://git.hs-coburg.de/ADAPT/adapt_bahplan) | Amod Patil |
 | Environmental Model | [adapt_envmod](https://git.hs-coburg.de/ADAPT/adapt_envmod) | Harshawardhan Patil |
 | Infrastructure Simulator | [adapt_inf](https://git.hs-coburg.de/ADAPT/adapt_inf) | Swati Upadhyay |
-| Lane and Boundary Detection | [adapt_lanboun](https://git.hs-coburg.de/ADAPT/adapt_obj) | Ibrahim Al Dabbagh |
+| Lane and Boundary Detection | [adapt_lanboun](https://git.hs-coburg.de/ADAPT/adapt_lanboun.git) | Ibrahim Al Dabbagh |
 | Lateral and Longitude Control | [adapt_latlongcon](https://git.hs-coburg.de/ADAPT/adapt_latlongcon) | Anish Patil |
 | Live Tracker | [adapt_livtrac](https://git.hs-coburg.de/ADAPT/adapt_livtrac) | Ritwik Ranjit, Amod Patil |
 | Localization | [adapt_loc](https://git.hs-coburg.de/ADAPT/adapt_loc) | Srijan Gupta |
