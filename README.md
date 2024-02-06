@@ -146,7 +146,7 @@ Behaviour Planning integrates inputs from the Environmental Model and Route Comp
 | In/Out | Topic Name| Message Type | Description | 
 | --------- | ---------- | ---------- | ----------- |
 | Input | /route|  nav_msgs/msg/Path| A optimum route from the vehicle's location to the parking spot | |
-| Input |/complete_model | |Complete model of where the vehicle is located with respect to its environment | |
+| Input |/complete_model | OcupancyGrid |Complete model of where the vehicle is located with respect to its environment | |
 | Output | /beh_spd | v2x/Speed | Speed specifications of the vehicle | 
 | Output | /beh_mcmd |  v2x/LateralAcceleration | Acceleration to the lateral direction |
 
@@ -166,9 +166,9 @@ The Environmental Model is a critical component in the architecture of autonomou
 | In/Out | Topic Name| Message Type | Description | 
 | --------- | ---------- | ---------- | ----------- |
 | Input | /detectnet/detections| Detection2DArray | The detectnet detections |
-| Input | /loc_pose| Pose | The current position of our vehicle |
+| Input | /loc_pose| PoseStamped | The current position of our vehicle |
 | Input  | /lane_detection/lane_info         | Float64MultiArray  | Detected lane information to Environmental model component     |
-| Output | /complete_model| | Complete model of where the vehicle is located with respect to its environment|
+| Output | /complete_model| OcupancyGrid | Complete model of where the vehicle is located with respect to its environment|
 
 > :memo: **Note:** Repository named as **"adapt_envmod"**.  
 ### [Route Computer](https://git.hs-coburg.de/ADAPT/adapt_roucomp)
@@ -250,16 +250,16 @@ The following table shows task and component allocation between team members bas
 | Environmental Model | [adapt_envmod](https://git.hs-coburg.de/ADAPT/adapt_envmod) | Harshawardhan Patil |
 | Infrastructure Simulator | [adapt_inf](https://git.hs-coburg.de/ADAPT/adapt_inf) | Swati Upadhyay |
 | Lane and Boundary Detection | [adapt_lanboun](https://git.hs-coburg.de/ADAPT/adapt_obj) | Ibrahim Al Dabbagh |
-| Lateral and Longitude Control | [adapt_latlongcon](https://git.hs-coburg.de/ADAPT/adapt_latlongcon) | Amish Patil |
+| Lateral and Longitude Control | [adapt_latlongcon](https://git.hs-coburg.de/ADAPT/adapt_latlongcon) | Anish Patil |
 | Live Tracker | [adapt_livtrac](https://git.hs-coburg.de/ADAPT/adapt_livtrac) | Ritwik Ranjit, Amod Patil |
 | Localization | [adapt_loc](https://git.hs-coburg.de/ADAPT/adapt_loc) | Srijan Gupta |
 | Custom Messages | [adapt_msgs](https://git.hs-coburg.de/ADAPT/adapt_msgs) | Ibrahim Al Dabbagh, Anish Patil |
-| Object Detection | [adapt_obj](https://git.hs-coburg.de/ADAPT/adapt_obj) | Ibrahim Al Dabbagh, Amod Patil |
+| Object Detection | [adapt_obj](https://git.hs-coburg.de/ADAPT/adapt_obj) | Ibrahim Al Dabbagh, Harshawardhan Patil |
 | Parking Spot Compatibility and Availability Checker | [adapt_psc_ac](https://git.hs-coburg.de/ADAPT/adapt_psc_ac) | Harshawardhan Patil |
 | Route Computer | [adapt_roucomp](https://git.hs-coburg.de/ADAPT/adapt_roucomp) | Riddhesh Dalvi |
 | Parking Spot Selector | [adapt_spotsl](https://git.hs-coburg.de/ADAPT/adapt_spotsl) | Ritwik Ranjit, Riddhesh Dalvi, Amod Patil |
 | Parking Spot Updater | [adapt_spotupd](https://git.hs-coburg.de/ADAPT/adapt_spotupd) | Amod Patil |
-| Transmitter | [adapt_transmitter](https://git.hs-coburg.de/ADAPT/adapt_trnsmtr) | Ritwik Ranjit, Anish Patil |
+| Transmitter | [adapt_transmitter](https://git.hs-coburg.de/ADAPT/adapt_trnsmtr) | Ritwik Ranjit, Anish Patil, Harshawardhan Patil |
 | User Interface | [adapt_ui](https://git.hs-coburg.de/ADAPT/adapt_ui) | Ritwik Ranjit |
 
 ## Installation Instructions
