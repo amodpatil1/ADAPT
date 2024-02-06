@@ -1,8 +1,34 @@
 # ADAPT OVERVIEW
-#### Welcome to the main repository of **ADAPT** System. This repository will help you navigate through our orgnization repositories and hopefully provide a comprehensive understanding of the system architecture and breifly describe components functionality.
+Welcome to the main repository of **ADAPT** System. This repository will help you navigate through our orgnization repositories and hopefully provide a comprehensive understanding of the system architecture and breifly describe components functionality.
+
+### **Question Zero:**
+To better understand how this project came to life and what ideas are behined it, let's take a look at our **Question Zero**, in which we try to answer the following about our project; What, For Whom, Where, Why, How:
+
+> :bulb: **Question Zero:** *How can we design an infrastructure-based End2End parking solution for all people arriving with an Autonomous vehicle into the covered urban area, to eliminate the distance traveled & effort required for parking, and reduce emissions, by integrating the leading edge technologies in communication, sensing infrastructure, and autonomous driving.*
+
+### Use Case: 
+Parking Autonomously to the Nearest Feasible Parking Spot
+
+* **Main Actors:** Ego Vehicle, Infrastructure
+
+* **Preconditions:**  
+ 1. Infrastructure monitors parking spots in the vicinity.
+ 2. User is at their destination.
+
+* **Success Guarantee:** EV parked and locked at the nearest feasible spot.
+
+* **Steps:**  
+    1. User exits car & commands vehicle to park; vehicle locks after door closes.
+    2. EV initiates communication with infrastructure for parking spot list.
+    3. EV receives available spot data from infrastructure.
+    4. EV computes nearest feasible parking spots.
+    5. EV sends confirmation to infrastructure about the chosen spot.
+    6. EV selects best route to the parking spot.
+    7. EV drives to and parks at the spot, checking for obstacles.
+    8. If spot is inaccessible, EV requests an alternative spot from infrastructure.
 
 # Architecture v2.0
-For a better understanding, we have split our architecture into 2 blocks diagrams, one for the **Infrastructre** and one for **Ego-Vehicle**. These two parts will communicate with each other through **V2X** communication.
+Considering the nature of our project and due to the fact that is dealing with two saparete systems, we had to split our architecture into 2 blocks diagrams, one for the **Infrastructre** and one for **Ego-Vehicle**. These two parts will communicate with each other through **V2X** communication.
 
 ## [Infrastructre Block Diagram ](https://git.hs-coburg.de/ADAPT/adapt_main/src/branch/main/images/infra-archi.png)
 ![Infrastructre Block Diagram](/images/infra-archi.png "Infrastructre")
