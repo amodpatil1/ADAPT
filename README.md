@@ -36,14 +36,19 @@ Considering the nature of our project and due to the fact that is dealing with t
 ## [Ego-Vehicle Block Diagram ](https://git.hs-coburg.de/ADAPT/adapt_main/src/branch/main/images/ev-archi.png)
 ![Ego-Vehicle Block Diagram](/images/ev-archi.png "Ego-Vehicle")
 
+# UML Diagrams 
+
 ## [Acivity Diagram ](https://git.hs-coburg.de/ADAPT/adapt_main/src/branch/main/images/activity_diagram.png)
-An Activity Diagram is a behavioral UML diagram that represents the flow of actions or activities within a system or process. It visualizes the workflow or process of ADAPT. It highlights the sequence of steps the vehicle follows and decision points.
+This diagram outlines the interaction between the autonomous vehicle (referred to as the EV) and the infrastructure from the point where the user commands the EV to park. The EV sends a request for available spots and receives a list from the infrastructure, which also makes the selected spot unavailable to others. The EV then computes a feasible path and begins navigating. The process takes into account obstacles, updating the path as necessary. Behavior planning and control are involved in navigating to the location, culminating in the vehicle parking itself assuming no objects are present in the parking space.
+
 > :memo: **Note:** Diagram is named **Acivity Diagram** the `images` folder. 
-## [State Diagram ](https://git.hs-coburg.de/ADAPT/adapt_main/src/branch/main/images/activity_diagram.png)
-Represents the various states an autonomous vehicle can be in within the parking process (e.g., searching for a spot, parking, and parked) and the events that trigger transitions between these states.
+## [State Diagram ](https://git.hs-coburg.de/ADAPT/adapt_main/src/branch/main/images/State_Diagram.jpg)
+This diagram depicts the various states that an Electric Vehicle (EV) goes through during the process of finding and parking in a parking spot. The process begins when the car arrives at the user destination and enters the idle state, where it locks the door and communicates with the infrastructure to obtain a parking spot. Next, it transitions to the drive state, where it processes data for control and object detection while en route to the parking spot. If an obstacle is detected, it will not proceed to parking. Once near the parking spot, it checks for accessibility, and if it's suitable, the car parks itself. Finally, when the car is in the parking spot, it stops, signaling that it has parked.
+
 > :memo: **Note:** Diagram is named **State Diagram** the `images` folder. 
-## [Sequence  Diagram ](https://git.hs-coburg.de/ADAPT/adapt_main/src/branch/main/images/activity_diagram.png)
-A Sequence Diagram is a behavioral UML diagram that illustrates how objects interact with each other in a particular sequence of messages over time. It focuses on representing the order and conditions under which messages are sent and received between objects, making it ideal for detailing specific scenarios of use cases. 
+## [Sequence  Diagram ](https://git.hs-coburg.de/ADAPT/adapt_main/src/branch/main/images/sequence_diagram.png)
+This sequence diagram illustrates the communication flow between the autonomous vehicle, the infrastructure, and other system components during the parking process. It starts with the vehicle requesting localization information, selecting a parking spot, and the infrastructure acknowledging this selection. The vehicle then receives localization data from GNSS (Global Navigation Satellite System) and digital maps, and the parking process is executed based on this data. The diagram shows a sequence of communications, including the transmission of the vehicle's location, user preferences, and the selected parking spot's location, which are crucial for the vehicle's navigation and parking operation.
+
 > :memo: **Note:** Diagram is named **Sequence Diagram** the `images` folder. 
 
 # Components and Functionality:
