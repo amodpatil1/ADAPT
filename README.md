@@ -119,14 +119,20 @@ The object detection algorithms use visual data such as images, videos, and lase
 | Input | /Raw images|  image_in| Raw input image | |
 | Output | /Detection| vision_msgs/Detection2DArray  | Detection results (Bounding boxes, class IDs, confidences) |
 
+> :warning: **Important Update:** Currently, We have decided to use the DetectNet Object Detection  in our implementation.
+
+For more information:
+- Basic Info on object detection: https://github.com/dusty-nv/jetson-inference
+- ROS node for jetson_inference: https://github.com/dusty-nv/ros_deep_learning; You need to remap the input topic
+
 > :memo: **Note:** Repository named as **"adapt_obj"**. 
 ### [Infrastructre](https://git.hs-coburg.de/ADAPT/adapt_inf)
-N/A
+
 
 | In/Out | Topic Name| Message Type | Description | 
 | --------- | ---------- | ---------- | ----------- |
 | Input | N/A|  | N/A |N/A |
-| Input |N/At | |N/At |N/A |
+| Input |N/A | |N/A |N/A |
 | Output | N/A |  N/A| N/A | 
 
 > :memo: **Note:** Repository named as **"adapt_inf"**.
@@ -219,13 +225,14 @@ Parking spot updater updates the parking spot list in the Infrastructure data ba
 
 
 ### [Custom Messages](https://git.hs-coburg.de/ADAPT/adapt_msgs)
-N/A
+This repository has been created to gather all of our custom messages in one package (See Repository for more details).
+The number of messages in this repository well change depending on the need of a custom message.
 
-| In/Out | Topic Name| Message Type | Description | 
-| --------- | ---------- | ---------- | ----------- |
-| Input | N/A|  | N/A |N/A |
-| Input |N/At | |N/At |N/A |
-| Output | N/A |  N/A| N/A | 
+| Topic Name| Message Type | Description | 
+| ---------- | ---------- | ----------- |
+| /lane_detection/lane_info | LaneInfo |Detected lane information |
+|N/At | |N/At |N/A |
+| N/A |  N/A| N/A | 
 
 > :memo: **Note:** Repository named as **"adapt_msgs"**.
 
