@@ -275,7 +275,11 @@ The following table shows task and component allocation between team members bas
 ```bash
     colcon build --symlink-install
 ```
-6. Run the launch file with ROS 2:
+6. Source the work space before running:
+```bash
+    source install/setup.bash
+```
+7. Run the launch file with ROS 2:
 ```bash
     ros2 launch adapt_launch.py
 ```
