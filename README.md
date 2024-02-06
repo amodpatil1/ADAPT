@@ -237,8 +237,7 @@ The number of messages in this repository well change depending on the need of a
 | Topic Name| Message Type | Description | 
 | ---------- | ---------- | ----------- |
 | /lane_detection/lane_info | LaneInfo |Detected lane information |
-| /act_cmd | CarCom | actuator commands |
-| N/A |  N/A| N/A | 
+| /act_cmd | CarCom | actuator commands | 
 
 > :memo: **Note:** Repository named as **"adapt_msgs"**.
 
