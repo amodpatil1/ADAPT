@@ -156,8 +156,8 @@ The component takes data from localization component and sends the live location
 
 | In/Out | Topic Name| Message Type | Description | 
 | --------- | ---------- | ---------- | ----------- |
-| Input | /vehicle_location| geometry_msgs/Pose | The location of the EV att all time from the localisation unit. |
-| Output | /live_loc| geometry_msgs/Pose| The live location of the EV during its parking manoeuver. |
+| Input | /vehicle_location| PoseStamped | The location of the EV att all time from the localisation unit. |
+| Output | /live_loc| PoseStamped| The live location of the EV during its parking manoeuver. |
 
 > :memo: **Note:** Repository named as **"adapt_livtrac"**.  
 ### [Environmental Model](https://git.hs-coburg.de/ADAPT/adapt_envmod)
