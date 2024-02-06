@@ -59,8 +59,8 @@ In our system, the EV receives a list of available parking spot from the infrast
 
 | **In/Out** | **Topic Name**| **Message Type** | **Description** |
 | --------- | ---------- | ---------- | ----------- |
-| Input | /parking spots|  evcsn-ts101556-1/ItsChargingStationData| Location of parking spots in the surrounding area  |
-| Output | /occupant_info | | The occupant information for creating an Unique ID | 
+| Input | /infraspot_list|  PoseStamped| Location of parking spots in the surrounding area  |
+| Output | /selected_spot_location | PoseStamped | The occupant information for creating an Unique ID | 
 
 > :memo: **Note:** Repository named as **"adapt_sposel"**.  
 ### [User Interface](https://git.hs-coburg.de/ADAPT/adapt_ui)
@@ -176,10 +176,10 @@ Route computer is the process of figuring out the optimum route for the vehicle 
 
 | In/Out | Topic Name| Message Type | Description | 
 | --------- | ---------- | ---------- | ----------- |
-| Input | /vehicle_location | geometry_msgs/Pose | The current position of our vehicle |
-| Input | /spot_location | v2x/msg/evcsn-ts101556-1/ItsChargingStationData | The selected parking spot's location from UI |
-| Input | /map_data | v2x/msg/MapData | The local map data from localization |
-| Output | /route | nav_msgs/msg/Path | A optimum route from the vehicle's location to the parking spot|
+| Input | /loc_pose | PoseStamped | The current position of our vehicle |
+| Input | /spot_location | PoseStamped | The selected parking spot's location from UI |
+| Input | /map_data | OccupancyGrid | The local map data from localization |
+| Output | /route | PoseArray | A optimum route from the vehicle's location to the parking spot|
 
 > :memo: **Note:** Repository named as **"adapt_roucomp"**. 
 
