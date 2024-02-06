@@ -259,7 +259,7 @@ The following table shows task and component allocation between team members bas
 | Route Computer | [adapt_roucomp](https://git.hs-coburg.de/ADAPT/adapt_roucomp) | Riddhesh Dalvi |
 | Parking Spot Selector | [adapt_spotsl](https://git.hs-coburg.de/ADAPT/adapt_spotsl) | Ritwik Ranjit, Riddhesh Dalvi, Amod Patil |
 | Parking Spot Updater | [adapt_spotupd](https://git.hs-coburg.de/ADAPT/adapt_spotupd) | Amod Patil |
-| Transmitter | [adapt_transmitter](https://git.hs-coburg.de/ADAPT/adapt_trnsmtr) | Ritwik Ranjit |
+| Transmitter | [adapt_transmitter](https://git.hs-coburg.de/ADAPT/adapt_trnsmtr) | Ritwik Ranjit, Anish Patil |
 | User Interface | [adapt_ui](https://git.hs-coburg.de/ADAPT/adapt_ui) | Ritwik Ranjit |
 
 ## Installation Instructions
