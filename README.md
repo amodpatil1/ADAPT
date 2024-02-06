@@ -112,6 +112,13 @@ and overall effective operation in diverse driving conditions. Without accurate 
 
 > :memo: **Note:** Repository named as **"adapt_lanboun"**.  
 ### [Object Detection](https://git.hs-coburg.de/ADAPT/adapt_obj)
+
+> :warning: **Important Update:** Currently, We have decided to use the DetectNet Object Detection  in our implementation.
+
+For more information:
+- Basic Info on object detection: https://github.com/dusty-nv/jetson-inference
+- ROS node for jetson_inference: https://github.com/dusty-nv/ros_deep_learning
+
 The object detection algorithms use visual data such as images, videos, and laser scan points to analyze and identify objects' locations. Identifying and understanding the surrounding environment is essential for safe vehicle navigation and parking. As a result, the information produced by the object detection process is provided to the Environment model.
 
 | In/Out | Topic Name| Message Type | Description | 
@@ -119,11 +126,6 @@ The object detection algorithms use visual data such as images, videos, and lase
 | Input | /Raw images|  image_in| Raw input image | |
 | Output | /Detection| vision_msgs/Detection2DArray  | Detection results (Bounding boxes, class IDs, confidences) |
 
-> :warning: **Important Update:** Currently, We have decided to use the DetectNet Object Detection  in our implementation.
-
-For more information:
-- Basic Info on object detection: https://github.com/dusty-nv/jetson-inference
-- ROS node for jetson_inference: https://github.com/dusty-nv/ros_deep_learning; You need to remap the input topic
 
 > :memo: **Note:** Repository named as **"adapt_obj"**. 
 ### [Infrastructre](https://git.hs-coburg.de/ADAPT/adapt_inf)
