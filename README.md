@@ -95,11 +95,11 @@ The localization component provides a precise location of the Ego-Vehicle with r
 #### Component Interfaces
 | **In/Out** | **Topic Name**| **Message Type** | **Description** | 
 | --------- | ---------- | ---------- | ----------- |
-| Input | camera/image_raw | Image | Image data from RealSense camera (not being used for now) | 
-| Input | PointCloud2 | LaserScan | LiDar detections (not being used for now) | 
-| Input | sensor_msgs/LaserScan | LaserScan | Radar detections (not being used for now)(Will be updated) |
-| Input | sensor_msgs/msgs/NavSatFix | PointStamped | Positioning data from GNSS (not being used for now)(Will be updated) |
-| Input | Map_data | Static Map | External Maps stored within the system (not being used for now)(Will be updated) |
+| Input | /camera/image_raw | Image | Image data from RealSense camera (not being used for now) | 
+| Input | /PointCloud2 | LaserScan | LiDar detections (not being used for now) | 
+| Input | /sensor_msgs/LaserScan | LaserScan | Radar detections (not being used for now)(Will be updated) |
+| Input | /sensor_msgs/msgs/NavSatFix | PointStamped | Positioning data from GNSS (not being used for now)(Will be updated) |
+| Input | /Map_data | Static Map | External Maps stored within the system (not being used for now)(Will be updated) |
 | Input | /rigid_bodies | RigidBodies | Input from Optitrack System to work in the Model city |
 | Output | /loc_pose | PoseStamped | Vehicle Pose |
 
@@ -149,9 +149,9 @@ Behaviour Planning integrates inputs from the Environmental Model and Route Comp
 | In/Out | Topic Name| Message Type | Description | 
 | --------- | ---------- | ---------- | ----------- |
 | Input | /route|  nav_msgs/msg/Path| A optimum route from the vehicle's location to the parking spot | |
-| Input |/complete_model | OcupancyGrid |Complete model of where the vehicle is located with respect to its environment | |
-| Output | /beh_spd | v2x/Speed | Speed specifications of the vehicle | 
-| Output | /beh_mcmd |  v2x/LateralAcceleration | Acceleration to the lateral direction |
+| Input | /complete_model | OccupancyGrid| Complete model of where the vehicle is located with respect to its environment | |
+| Input | /loc_pose | PoseStamped|Location of Ego Vehicle | |
+| Output | /cmd_vel | geometry_msgs/Twist | linear and angular velocities of the vehicle |
 
 > :memo: **Note:** Repository named as **"adapt_behplan"**.  
 ### [Live Tracker](https://git.hs-coburg.de/ADAPT/adapt_livtrac)
@@ -191,10 +191,9 @@ Route computer is the process of figuring out the optimum route for the vehicle 
 The lateral and longitudinal control refers to steering and speed management: lateral control governs side-to-side steering for lane positioning, while longitudinal control manages forward and backward motion, including acceleration and deceleration.
 
 | In/Out | Topic Name| Message Type | Description | 
-| --------- | ---------- | ---------- | ----------- |
-| Input | /beh_spd | v2x/Speed | Speed specifications of the vehicle | 
-| Input | /beh_mcmd |  v2x/LateralAcceleration | Acceleration to the lateral direction |
-| Output | /cmd_vel | geometry_msgs/Twist | Linear and angular velocity command |
+| --------- | ---------- | ---------- | ----------- | 
+| Input | /cmd_vel |  geometry_msgs/Twist | speed specifications |
+| Output | /act_cmd | adapt_msgs/CarCom | actuator commands to steer and accelerate the vehicle |
 
 > :memo: **Note:** Repository named as **"adapt_latlongcon"**. 
 
@@ -211,8 +210,8 @@ The transmitter is responsible for sending and receiving messages from the EV to
 | Output | /ev_location| PoseStamped | The initial location of the EV|
 | Output | /selected_spot| PoseStamped | The selected parking location.|
 | Output | /user_info| String  | The details of the user.|
-| Output | /cam_data | |It is responsible for publishing the CAM messages for V2X application|
-| Output | /cpm_data | |It is responsible for publishing the CPM messages for V2X application|
+| Output | /cam_data | CAM |It is responsible for publishing the CAM messages for V2X application|
+| Output | /cpm_data | CPM |It is responsible for publishing the CPM messages for V2X application|
 
 > :memo: **Note:** Repository named as **"adapt_transmitter"**. 
 
