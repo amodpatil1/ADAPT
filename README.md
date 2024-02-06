@@ -132,8 +132,7 @@ The object detection algorithms use visual data such as images, videos, and lase
 
 > :memo: **Note:** Repository named as **"adapt_obj"**. 
 ### [Infrastructre](https://git.hs-coburg.de/ADAPT/adapt_inf)
-
-
+This component outlines how parking spots are autonomously selected, communicated to the User Interface (UI), transmitted to the infrastructure, and updated for vehicle access. By understanding these processes, stakeholders gain insight into our system's functionality and architecture.
 ## Component Interface
 | In/Out  | Topic Name                        | Message Type | Description                          |
 |---------|-----------------------------------|--------------|--------------------------------------|
