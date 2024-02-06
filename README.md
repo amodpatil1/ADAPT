@@ -253,9 +253,29 @@ The following table shows task and component allocation between team members bas
 | Transmitter | [adapt_transmitter](https://git.hs-coburg.de/ADAPT/adapt_trnsmtr) | Ritwik Ranjit |
 | User Interface | [adapt_ui](https://git.hs-coburg.de/ADAPT/adapt_ui) | Ritwik Ranjit |
 
+## Installation Instructions
 
-## Initial setup
+1. Clone the repository:
 ```bash
-cd adapt_main
-vcs import src < adapt_repos.repo
+    git clone https://git.hs-coburg.de/ADAPT/adapt_main.git
+```
+2. Change to the cloned directory:
+```bash
+    cd adapt_main
+```
+3. Import the repositories listed in the adapt_repos.repo file:
+```bash
+    vcs import src < adapt_repos.repo
+```
+4. Navigate to the root of your ROS 2 workspace:
+```bash
+    cd ..
+```
+5. Build the workspace using `colcon`:
+```bash
+    colcon build --symlink-install
+```
+6. Run the launch file with ROS 2:
+```bash
+    ros2 launch adapt_launch.py
 ```
