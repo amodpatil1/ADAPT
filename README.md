@@ -233,21 +233,23 @@ vcs import src < adapt_repos.repo
 # Task and Component Allocation
 The following table shows task and component allocation between team members based on the Repository:
 
-| Repository Name | Maintainer |
-|-----------------|------------|
-| [**adapt_main**] | Ibrahim Al Dabbagh, Harshawardhan Patil |
-| [adapt_behplan](https://git.hs-coburg.de/ADAPT/adapt_bahplan) | Amod Patil |
-| [adapt_envmod](https://git.hs-coburg.de/ADAPT/adapt_envmod) | Harshawardhan Patil |
-| [adapt_inf](https://git.hs-coburg.de/ADAPT/adapt_inf) | Swati Upadhyay |
-| [adapt_lanboun](https://git.hs-coburg.de/ADAPT/adapt_obj) | Ibrahim Al Dabbagh |
-| [adapt_latlongcon](https://git.hs-coburg.de/ADAPT/adapt_latlongcon) | Amish Patil |
-| [adapt_livtrac](https://git.hs-coburg.de/ADAPT/adapt_livtrac) | Ritwik Ranjit, Amod Patil |
-| [adapt_loc](https://git.hs-coburg.de/ADAPT/adapt_loc) | Srijan Gupta |
-| [adapt_msgs](https://git.hs-coburg.de/ADAPT/adapt_msgs) | Ibrahim Al Dabbagh, Anish Patil |
-| [adapt_obj](https://git.hs-coburg.de/ADAPT/adapt_obj) | Ibrahim Al Dabbagh, Amod Patil |
-| [adapt_psc_ac](https://git.hs-coburg.de/ADAPT/adapt_psc_ac) | Harshawardhan Patil |
-| [adapt_roucomp](https://git.hs-coburg.de/ADAPT/adapt_roucomp) | Riddhesh Dalvi |
-| [adapt_spotsl](https://git.hs-coburg.de/ADAPT/adapt_sposel) | Ritwik Ranjit, Riddhesh Dalvi, Amod Patil |
-| [adapt_spotupd](https://git.hs-coburg.de/ADAPT/adapt_spotupd) | Amod Patil |
-| [adapt_transmitter](https://git.hs-coburg.de/ADAPT/adapt_trnsmtr) | Ritwik Ranjit |
-| [adapt_ui](https://git.hs-coburg.de/ADAPT/adapt_ui) | Ritwik Ranjit |
+
+|  Name | Repository Name | Maintainer |
+|----------------|-----------------|------------|
+| Main | [**adapt_main**](https://git.hs-coburg.de/ADAPT/adapt_main) | Ibrahim Al Dabbagh, Harshawardhan Patil |
+| Behaviour Planning | [adapt_behplan](https://git.hs-coburg.de/ADAPT/adapt_bahplan) | Amod Patil |
+| Environmental Model | [adapt_envmod](https://git.hs-coburg.de/ADAPT/adapt_envmod) | Harshawardhan Patil |
+| Infrastructure Simulator | [adapt_inf](https://git.hs-coburg.de/ADAPT/adapt_inf) | Swati Upadhyay |
+| Lane and Boundary Detection | [adapt_lanboun](https://git.hs-coburg.de/ADAPT/adapt_obj) | Ibrahim Al Dabbagh |
+| Lateral and Longitude Control | [adapt_latlongcon](https://git.hs-coburg.de/ADAPT/adapt_latlongcon) | Amish Patil |
+| Live Tracker | [adapt_livtrac](https://git.hs-coburg.de/ADAPT/adapt_livtrac) | Ritwik Ranjit, Amod Patil |
+| Localization | [adapt_loc](https://git.hs-coburg.de/ADAPT/adapt_loc) | Srijan Gupta |
+| Custom Messages | [adapt_msgs](https://git.hs-coburg.de/ADAPT/adapt_msgs) | Ibrahim Al Dabbagh, Anish Patil |
+| Object Detection | [adapt_obj](https://git.hs-coburg.de/ADAPT/adapt_obj) | Ibrahim Al Dabbagh, Amod Patil |
+| Parking Spot Compatibility and Availability Checker | [adapt_psc_ac](https://git.hs-coburg.de/ADAPT/adapt_psc_ac) | Harshawardhan Patil |
+| Route Computer | [adapt_roucomp](https://git.hs-coburg.de/ADAPT/adapt_roucomp) | Riddhesh Dalvi |
+| Parking Spot Selector | [adapt_spotsl](https://git.hs-coburg.de/ADAPT/adapt_sposel) | Ritwik Ranjit, Riddhesh Dalvi, Amod Patil |
+| Parking Spot Updater | [adapt_spotupd](https://git.hs-coburg.de/ADAPT/adapt_spotupd) | Amod Patil |
+| Transmitter | [adapt_transmitter](https://git.hs-coburg.de/ADAPT/adapt_trnsmtr) | Ritwik Ranjit |
+| User Interface | [adapt_ui](https://git.hs-coburg.de/ADAPT/adapt_ui) | Ritwik Ranjit |
+
