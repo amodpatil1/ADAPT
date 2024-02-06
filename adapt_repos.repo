@@ -66,5 +66,5 @@ repositories:
   adapt_inf:
     type: git
     url: https://git.hs-coburg.de/ADAPT/adapt_inf.git
-    version: master
+    version: main
    
