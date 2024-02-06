@@ -134,11 +134,13 @@ The object detection algorithms use visual data such as images, videos, and lase
 ### [Infrastructre](https://git.hs-coburg.de/ADAPT/adapt_inf)
 
 
-| In/Out | Topic Name| Message Type | Description | 
-| --------- | ---------- | ---------- | ----------- |
-| Input | N/A|  | N/A |N/A |
-| Input |N/A | |N/A |N/A |
-| Output | N/A |  N/A| N/A | 
+## Component Interface
+| In/Out  | Topic Name                        | Message Type | Description                          |
+|---------|-----------------------------------|--------------|--------------------------------------|
+| Input   | /spot_location            | PoseStamped    | This message will give us the spot selected by the spot selector  |
+| Input | /ev_location        | ItsChargingStationData| This message will give us the location of th ego vehicle    |
+| Input   | /user_info            | string   | This message will give us the info of the user |
+| Output  | /updated_parking_spots        | ItsChargingStationData| This message will give us the NEW list of updated parking list     |
 
 > :memo: **Note:** Repository named as **"adapt_inf"**.
 
