@@ -36,6 +36,9 @@ Considering the nature of our project and due to the fact that is dealing with t
 ## [Ego-Vehicle Block Diagram ](https://git.hs-coburg.de/ADAPT/adapt_main/src/branch/main/images/ev-archi.png)
 ![Ego-Vehicle Block Diagram](/images/ev-archi.png "Ego-Vehicle")
 
+## [Ego-Vehicle RQT](https://git.hs-coburg.de/ADAPT/adapt_main/src/branch/main/images/rqt_full.png)
+![Ego-Vehicle RQT](/images/rqt_full.png "Ego-Vehicle")
+
 # UML Diagrams 
 
 ## [Acivity Diagram ](https://git.hs-coburg.de/ADAPT/adapt_main/src/branch/main/images/activity_diagram.png)
