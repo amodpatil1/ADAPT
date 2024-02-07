@@ -136,7 +136,7 @@ This component outlines how parking spots are autonomously selected, communicate
 ## Component Interface
 | In/Out  | Topic Name                        | Message Type | Description                          |
 |---------|-----------------------------------|--------------|--------------------------------------|
-| Input   | /spot_location            | PoseStamped    | This message will give us the spot selected by the spot selector  |
+| Input   | /selected_spot            | PoseStamped    | This message will give us the spot selected by the spot selector  |
 | Input | /ev_location        | PoseStamped| This message will give us the location of th ego vehicle    |
 | Input   | /user_info            | string   | This message will give us the info of the user |
 | Output  | /updated_parking_spots        | ItsChargingStationData| This message will give us the NEW list of updated parking list     |
