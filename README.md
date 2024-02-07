@@ -297,7 +297,7 @@ The following table shows task and component allocation between team members bas
 ```
 8. Start RealSense camera:
 ```bash
-    ros2 launch realsense2_camera rs_launch.py
+ros2 launch realsense_examples rs_camera.launch.py
 ```
 9. Starting DetectNet:
 ```bash
