@@ -229,7 +229,6 @@ Parking spot updater updates the parking spot list in the Infrastructure data ba
 > :memo: **Note:** Repository named as **"adapt_spotupd"**.
 
 
-
 ### [Custom Messages](https://git.hs-coburg.de/ADAPT/adapt_msgs)
 This repository has been created to gather all of our custom messages in one package (See Repository for more details).
 The number of messages in this repository well change depending on the need of a custom message.
@@ -241,29 +240,6 @@ The number of messages in this repository well change depending on the need of a
 
 > :memo: **Note:** Repository named as **"adapt_msgs"**.
 
-
-# Task and Component Allocation
-The following table shows task and component allocation between team members based on the Repository:
-
-
-|  Name | Repository Name | Maintainer |
-|----------------|-----------------|------------|
-| Main | [**adapt_main**](https://git.hs-coburg.de/ADAPT/adapt_main) | Ibrahim Al Dabbagh, Harshawardhan Patil |
-| Behaviour Planning | [adapt_behplan](https://git.hs-coburg.de/ADAPT/adapt_bahplan) | Amod Patil |
-| Environmental Model | [adapt_envmod](https://git.hs-coburg.de/ADAPT/adapt_envmod) | Harshawardhan Patil |
-| Infrastructure Simulator | [adapt_inf](https://git.hs-coburg.de/ADAPT/adapt_inf) | Swati Upadhyay |
-| Lane and Boundary Detection | [adapt_lanboun](https://git.hs-coburg.de/ADAPT/adapt_lanboun.git) | Ibrahim Al Dabbagh |
-| Lateral and Longitude Control | [adapt_latlongcon](https://git.hs-coburg.de/ADAPT/adapt_latlongcon) | Anish Patil |
-| Live Tracker | [adapt_livtrac](https://git.hs-coburg.de/ADAPT/adapt_livtrac) | Ritwik Ranjit, Amod Patil, Riddhesh Dalvi |
-| Localization | [adapt_loc](https://git.hs-coburg.de/ADAPT/adapt_loc) | Srijan Gupta |
-| Custom Messages | [adapt_msgs](https://git.hs-coburg.de/ADAPT/adapt_msgs) | Ibrahim Al Dabbagh, Anish Patil |
-| Object Detection | [adapt_obj](https://git.hs-coburg.de/ADAPT/adapt_obj) | Ibrahim Al Dabbagh, Harshawardhan Patil |
-| Parking Spot Compatibility and Availability Checker | [adapt_psc_ac](https://git.hs-coburg.de/ADAPT/adapt_psc_ac) | Harshawardhan Patil |
-| Route Computer | [adapt_roucomp](https://git.hs-coburg.de/ADAPT/adapt_roucomp) | Riddhesh Dalvi |
-| Parking Spot Selector | [adapt_spotsl](https://git.hs-coburg.de/ADAPT/adapt_spotsl) | Ritwik Ranjit, Riddhesh Dalvi, Amod Patil |
-| Parking Spot Updater | [adapt_spotupd](https://git.hs-coburg.de/ADAPT/adapt_spotupd) | Amod Patil |
-| Transmitter | [adapt_transmitter](https://git.hs-coburg.de/ADAPT/adapt_trnsmtr) | Ritwik Ranjit, Anish Patil, Harshawardhan Patil |
-| User Interface | [adapt_ui](https://git.hs-coburg.de/ADAPT/adapt_ui) | Ritwik Ranjit |
 
 ## Installation Instructions
 
@@ -287,19 +263,20 @@ The following table shows task and component allocation between team members bas
 ```bash
     colcon build --symlink-install
 ```
-6. Source the work space before running:
+## Running Instructions
+1. Source the work space before running:
 ```bash
     source install/setup.bash
 ```
-7. Run the launch file with ROS 2:
+2. Run the launch file with ROS 2:
 ```bash
     ros2 launch adapt_launch.py
 ```
-8. Start RealSense camera:
+3. Start RealSense camera:
 ```bash
 ros2 launch realsense_examples rs_camera.launch.py
 ```
-9. Starting DetectNet:
+4. Starting DetectNet:
 ```bash
     ros2 launch ros_deep_learning detectnet.ros2.launch
 ```
