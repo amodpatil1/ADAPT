@@ -17,9 +17,9 @@ def generate_launch_description():
             
         ),
         Node(
-            package='adapt_ui', 
-            executable='ui1_node',
-            name='UI_1'
+            package='adapt_ui',
+            executable='vehicleinterface_node',
+            name='vehicle_interface'
         ),
  
         
