@@ -67,13 +67,13 @@ In our system, the EV receives a list of available parking spot from the infrast
 
 > :memo: **Note:** Repository named as **"adapt_sposel"**.  
 ### [User Interface](https://git.hs-coburg.de/ADAPT/adapt_ui)
-USER INTERFACE 1:
+Vehicle Interface :
 The User Interface 1 is the primary interaction of the User with the ADAPT. The User Interface 1 aids the user to input their Information to the system and then give command to park the vehicle, which inturn initializes the system. It is present in the Ego Vehicle.
 
-USER INTERFACE 2:
+Mobile Interface:
 The User Interface 2 (present on user's hand) aids the User to track the location of the Ego vehicle at all times also it displays the location where the Ego vehicle is going to be parked.
 
-#### UI 1
+#### Vehicle Interface
 | In/Out | Topic Name| Message Type | Description | 
 | --------- | ------------ | ---------- | ----------- |
 | Input | /info_info | string | The occupant_info for creating Unique ID |
@@ -82,7 +82,7 @@ The User Interface 2 (present on user's hand) aids the User to track the locatio
 | Output | /spot_location | PoseStamped | The location of the selected spot to park.|
 | Output | /occupant_info| string | The information of occupant details, selected parking spot and EV location.|
 
-#### UI 2
+#### Mobile Interface
 | In/Out | Topic Name| Message Type | Description | 
 | --------- | ---------- | ---------- | ----------- |
 | Input | /live_loc| PoseStamped | The location of the EV |
@@ -92,7 +92,7 @@ The User Interface 2 (present on user's hand) aids the User to track the locatio
 ### [Localization](https://git.hs-coburg.de/ADAPT/adapt_loc)
 The localization component provides a precise location of the Ego-Vehicle with respect to its environment after taking the input data from the perception sensors, the stored Digital Maps and the coordinates from the GNSS. Currently only set up for working with the OptiTrack system in the model city.
 
-#### Component Interfaces
+
 | **In/Out** | **Topic Name**| **Message Type** | **Description** | 
 | --------- | ---------- | ---------- | ----------- |
 | Input | /camera/image_raw | Image | Image data from RealSense camera (not being used for now) | 
@@ -133,7 +133,7 @@ The object detection algorithms use visual data such as images, videos, and lase
 > :memo: **Note:** Repository named as **"adapt_obj"**. 
 ### [Infrastructre](https://git.hs-coburg.de/ADAPT/adapt_inf)
 This component outlines how parking spots are autonomously selected, communicated to the User Interface (UI), transmitted to the infrastructure, and updated for vehicle access. By understanding these processes, stakeholders gain insight into our system's functionality and architecture.
-## Component Interface
+
 | In/Out  | Topic Name                        | Message Type | Description                          |
 |---------|-----------------------------------|--------------|--------------------------------------|
 | Input   | /selected_spot            | PoseStamped    | This message will give us the spot selected by the spot selector  |
@@ -199,8 +199,8 @@ The lateral and longitudinal control refers to steering and speed management: la
 
 > :memo: **Note:** Repository named as **"adapt_latlongcon"**. 
 
-### [Transmitter](https://git.hs-coburg.de/ADAPT/adapt_trnsmtr)
-The transmitter is responsible for sending and receiving messages from the EV to Infrastructure and vice versa.
+### [Transceiver](https://git.hs-coburg.de/ADAPT/adapt_trnsmtr)
+The transceiver is responsible for sending and receiving messages from the EV to Infrastructure and vice versa.
 
 
 | In/Out | Topic Name| Message Type | Description | 
