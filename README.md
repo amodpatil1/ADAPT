@@ -31,7 +31,7 @@ Parking Autonomously to the Nearest Feasible Parking Spot
 Considering the nature of our project and due to the fact that is dealing with two saparete systems, we had to split our architecture into 2 blocks diagrams, one for the **Infrastructre** and one for **Ego-Vehicle**. These two parts will communicate with each other through **V2X** communication.
 
 ## [Infrastructre Block Diagram ](https://git.hs-coburg.de/ADAPT/adapt_main/src/branch/main/images/infra-archi.png)
-![Infrastructre Block Diagram](/images/infra-archi.png "Infrastructre")
+![Infrastructre Block Diagram](/ADAPT/adapt_main/src/branch/main/images/infra-archi.png)
 
 ## [Ego-Vehicle Block Diagram ](https://git.hs-coburg.de/ADAPT/adapt_main/src/branch/main/images/ev-archi.png)
 ![Ego-Vehicle Block Diagram](/images/ev-archi.png "Ego-Vehicle")
