@@ -35,7 +35,7 @@ repositories:
     type: git
     url: https://git.hs-coburg.de/ADAPT/adapt_spotsl.git
     version: main
-  adapt_transmitter:
+  adapt_transceiver:
     type: git
     url: https://git.hs-coburg.de/ADAPT/adapt_transceiver.git
     version: main
@@ -55,8 +55,7 @@ repositories:
     type: git
     url: https://git.hs-coburg.de/ADAPT/adapt_msgs.git 
     version: main   
-  adapt_inf:
+  adapt_inf_od:
     type: git
-    url: https://git.hs-coburg.de/ADAPT/adapt_inf.git
-    version: main
-   
+    url: https://git.hs-coburg.de/ADAPT/adapt_inf_od.git
+    version: main   
