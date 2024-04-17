@@ -55,9 +55,9 @@ This sequence diagram illustrates the communication flow between the autonomous 
 > :memo: **Note:** Diagram is named **Sequence Diagram** the `images` folder. 
 
 # Components and Functionality:
+# Ego Vehicle
 #### This section will be devided into 3 parts accoring to the Architecture as Sense, Plan, and Act.
 ## 1. Sense 
-
 
 ### [User Interface](https://git.hs-coburg.de/ADAPT/adapt_ui)
 Vehicle Interface :
@@ -195,7 +195,7 @@ The lateral and longitudinal control refers to steering and speed management: la
 
 > :memo: **Note:** Repository named as **"adapt_latlongcon"**. 
 
-### [Transceiver](https://git.hs-coburg.de/ADAPT/adapt_trnsmtr)
+### [Transceiver](https://git.hs-coburg.de/ADAPT/adapt_transceiver)
 The transceiver is responsible for sending and receiving messages from the EV to Infrastructure and vice versa.
 
 
@@ -207,10 +207,13 @@ The transceiver is responsible for sending and receiving messages from the EV to
 | Output | /cam_msgs | CAM |It is responsible for publishing the CAM messages for V2X application|
 | Output | /detected_objects | CPM |It is responsible for publishing the CPM messages for V2X application|
 
-> :memo: **Note:** Repository named as **"adapt_transmitter"**. 
+> :memo: **Note:** Repository named as **"adapt_transceiver"**. 
 
-### Infrastructre
-[parking spot detection for infrastructure](https://git.hs-coburg.de/ADAPT/adapt_inf_od)
+# Infrastructre
+#### This section will be devided into 3 parts accoring to the Architecture as Sense, Plan, and Act.
+## 1. Sense 
+
+###[parking spot detection for infrastructure](https://git.hs-coburg.de/ADAPT/adapt_inf_od)
 This component outlines how parking spots are autonomously selected, communicated to the User Interface (UI), transmitted to the infrastructure, and updated for vehicle access. By understanding these processes, stakeholders gain insight into our system's functionality and architecture.
 
 | In/Out  | Topic Name                        | Message Type | Description                          |
@@ -223,6 +226,8 @@ This component outlines how parking spots are autonomously selected, communicate
 
 > :memo: **Note:** Repository named as **"adapt_inf_od"**.
 
+
+## 2. Plan
 ### [Parking spot updater](https://git.hs-coburg.de/ADAPT/adapt_spotupd)
 Parking spot updater updates the parking spot list in the Infrastructure data base. It takes inputs from object detection which is objects in and around the parking spot and the Occupant information. The Output is then given to the Infrastructure Data base which updates the parking spot list.
 
@@ -233,6 +238,18 @@ Parking spot updater updates the parking spot list in the Infrastructure data ba
 | Output | /updated_list |  | Updated parking spot List | 
 
 > :memo: **Note:** Repository named as **"adapt_spotupd"**.
+
+## 3. Act
+### [Infrastructure Transceiver](https://git.hs-coburg.de/ADAPT/adapt_inf_transceiver)
+...........
+
+| In/Out | Topic Name| Message Type | Description | 
+| --------- | ---------- | ---------- | ----------- |
+| Input | /occupant_info|  | The occupant_info for creating Unique ID | |
+| Input |/object_list | |objects in and around the parking spot | |
+| Output | /updated_list |  | Updated parking spot List | 
+
+> :memo: **Note:** Repository named as **"adapt_inf_transceiver"**.
 
 ### Custom Messages
 ### [adapt Messages](https://git.hs-coburg.de/ADAPT/adapt_msgs)
