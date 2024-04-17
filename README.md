@@ -209,31 +209,6 @@ The transceiver is responsible for sending and receiving messages from the EV to
 
 > :memo: **Note:** Repository named as **"adapt_transmitter"**. 
 
-
-### [Parking spot updater](https://git.hs-coburg.de/ADAPT/adapt_spotupd)
-Parking spot updater updates the parking spot list in the Infrastructure data base. It takes inputs from object detection which is objects in and around the parking spot and the Occupant information. The Output is then given to the Infrastructure Data base which updates the parking spot list.
-
-| In/Out | Topic Name| Message Type | Description | 
-| --------- | ---------- | ---------- | ----------- |
-| Input | /occupant_info|  | The occupant_info for creating Unique ID | |
-| Input |/object_list | |objects in and around the parking spot | |
-| Output | /updated_list |  | Updated parking spot List | 
-
-> :memo: **Note:** Repository named as **"adapt_spotupd"**.
-
-
-### [Custom Messages](https://git.hs-coburg.de/ADAPT/adapt_msgs)
-This repository has been created to gather all of our custom messages in one package (See Repository for more details).
-The number of messages in this repository well change depending on the need of a custom message.
-
-| Topic Name| Message Type | Description | 
-| ---------- | ---------- | ----------- |
-| /ev_location | VehData |The converted CAM messages from other vehicles for environment model |
-| /act_cmd | CarCom | actuator commands | 
-
-> :memo: **Note:** Repository named as **"adapt_msgs"**.
-
-
 ### Infrastructre
 [parking spot detection for infrastructure](https://git.hs-coburg.de/ADAPT/adapt_inf_od)
 This component outlines how parking spots are autonomously selected, communicated to the User Interface (UI), transmitted to the infrastructure, and updated for vehicle access. By understanding these processes, stakeholders gain insight into our system's functionality and architecture.
@@ -248,6 +223,28 @@ This component outlines how parking spots are autonomously selected, communicate
 
 > :memo: **Note:** Repository named as **"adapt_inf_od"**.
 
+### [Parking spot updater](https://git.hs-coburg.de/ADAPT/adapt_spotupd)
+Parking spot updater updates the parking spot list in the Infrastructure data base. It takes inputs from object detection which is objects in and around the parking spot and the Occupant information. The Output is then given to the Infrastructure Data base which updates the parking spot list.
+
+| In/Out | Topic Name| Message Type | Description | 
+| --------- | ---------- | ---------- | ----------- |
+| Input | /occupant_info|  | The occupant_info for creating Unique ID | |
+| Input |/object_list | |objects in and around the parking spot | |
+| Output | /updated_list |  | Updated parking spot List | 
+
+> :memo: **Note:** Repository named as **"adapt_spotupd"**.
+
+### Custom Messages
+### [adapt Messages](https://git.hs-coburg.de/ADAPT/adapt_msgs)
+This repository has been created to gather all of our custom messages in one package (See Repository for more details).
+The number of messages in this repository well change depending on the need of a custom message.
+
+| Topic Name| Message Type | Description | 
+| ---------- | ---------- | ----------- |
+| /ev_location | VehData |The converted CAM messages from other vehicles for environment model |
+| /act_cmd | CarCom | actuator commands | 
+
+> :memo: **Note:** Repository named as **"adapt_msgs"**.
 
 ## Installation Instructions
 
