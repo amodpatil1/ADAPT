@@ -228,7 +228,7 @@ This component outlines how parking spots are autonomously selected, communicate
 
 
 ## 2. Plan
-### [Parking spot updater](https://git.hs-coburg.de/ADAPT/adapt_spotupd)
+### [Parking spot updater](https://git.hs-coburg.de/ADAPT/adapt_inf_spotupd)
 Parking spot updater updates the parking spot list in the Infrastructure data base. It takes inputs from object detection which is objects in and around the parking spot and the Occupant information. The Output is then given to the Infrastructure Data base which updates the parking spot list.
 
 | In/Out | Topic Name| Message Type | Description | 
@@ -237,7 +237,7 @@ Parking spot updater updates the parking spot list in the Infrastructure data ba
 | Input |/object_list | |objects in and around the parking spot | |
 | Output | /updated_list |  | Updated parking spot List | 
 
-> :memo: **Note:** Repository named as **"adapt_spotupd"**.
+> :memo: **Note:** Repository named as **"adapt_inf_spotupd"**.
 
 ## 3. Act
 ### [Infrastructure Transceiver](https://git.hs-coburg.de/ADAPT/adapt_inf_transceiver)
