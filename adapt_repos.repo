@@ -11,10 +11,6 @@ repositories:
     type: git
     url: https://git.hs-coburg.de/ADAPT/adapt_livtrac.git
     version: main
-  adapt_lanboun:
-    type: git
-    url: https://git.hs-coburg.de/ADAPT/adapt_lanboun.git
-    version: main
   adapt_loc:
     type: git
     url: https://git.hs-coburg.de/ADAPT/adapt_loc.git
@@ -41,11 +37,7 @@ repositories:
     version: main
   adapt_transmitter:
     type: git
-    url: https://git.hs-coburg.de/ADAPT/adapt_transmitter.git
-    version: main
-  adapt_psc_ac:
-    type: git
-    url: https://git.hs-coburg.de/ADAPT/adapt_psc_ac.git
+    url: https://git.hs-coburg.de/ADAPT/adapt_transceiver.git
     version: main
   adapt_spotupd:
     type: git
