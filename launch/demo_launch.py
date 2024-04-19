@@ -21,8 +21,8 @@ def generate_launch_description():
         ),
         Node(
             package='adapt_vi',     
-            executable='transceiver_node',  
-            name= 'transceiver' 
+            executable='gvi_node',  
+            name= 'vi' 
         ) ,
         Node(
             package='adapt_mi',     
