@@ -30,14 +30,11 @@ Parking Autonomously to the Nearest Feasible Parking Spot
 # Architecture v2.0
 Considering the nature of our project and due to the fact that is dealing with two saparete systems, we had to split our architecture into 2 blocks diagrams, one for the **Infrastructre** and one for **Ego-Vehicle**. These two parts will communicate with each other through **V2X** communication.
 
-## [Infrastructre Block Diagram ](https://git.hs-coburg.de/ADAPT/adapt_main/src/branch/main/images/infra-archi.png)
-![Infrastructre Block Diagram](https://git.hs-coburg.de/ADAPT/adapt_main/src/branch/main/images/infra-archi.png)
+## [Infrastructre Block Diagram ](https://git.hs-coburg.de/ADAPT/adapt_main/src/branch/main/images/archi_v3_2.jpg)
+![Infrastructre Block Diagram](https://git.hs-coburg.de/ADAPT/adapt_main/raw/branch/main/images/archi_v3_2.jpg)
 
-## [Ego-Vehicle Block Diagram ](https://git.hs-coburg.de/ADAPT/adapt_main/src/branch/main/images/ev-archi.png)
-![Ego-Vehicle Block Diagram](/images/ev-archi.png "Ego-Vehicle")
-
-## [Ego-Vehicle RQT](https://git.hs-coburg.de/ADAPT/adapt_main/src/branch/main/images/rqt_full.png)
-![Ego-Vehicle RQT](/images/rqt_full.png "Ego-Vehicle")
+## [Ego-Vehicle Block Diagram ](https://git.hs-coburg.de/ADAPT/adapt_main/src/branch/main/images/archi_v3.jpg)
+![Ego-Vehicle Block Diagram](https://git.hs-coburg.de/ADAPT/adapt_main/raw/branch/main/images/archi_v3.jpg)
 
 # UML Diagrams 
 
