@@ -85,18 +85,13 @@ The User Interface 2 (present on user's hand) aids the User to track the locatio
 
 
 ### [Localization](https://git.hs-coburg.de/ADAPT/adapt_loc)
-The localization component provides a precise location of the Ego-Vehicle with respect to its environment after taking the input data from the perception sensors, the stored Digital Maps and the coordinates from the GNSS. Currently only set up for working with the OptiTrack system in the model city.
 
+The localization component provides a precise location of the Ego-Vehicle with respect to its environment. It is designed to handle real-time localization data from motion capture systems used in the Model City. It processes incoming data from the motion capture system, and publishes X,Y positions relative to X0,Y0 for the MOCAP system along with the orientation on Z axis.systems.
 
-| **In/Out** | **Topic Name**| **Message Type** | **Description** | 
-| --------- | ---------- | ---------- | ----------- |
-| Input | /camera/image_raw | Image | Image data from RealSense camera (not being used for now) | 
-| Input | /PointCloud2 | LaserScan | LiDar detections (not being used for now) | 
-| Input | /sensor_msgs/LaserScan | LaserScan | Radar detections (not being used for now)(Will be updated) |
-| Input | /sensor_msgs/msgs/NavSatFix | PointStamped | Positioning data from GNSS (not being used for now)(Will be updated) |
-| Input | /Map_data | Static Map | External Maps stored within the system (not being used for now)(Will be updated) |
-| Input | /pose_modelcars | RigidBodies | Input from Optitrack System to work in the Model city |
-| Output | /loc_pose | PoseStamped | Vehicle Pose |
+| In/Out | Topic Name          | Message Type                 | Description                                  |
+|--------|---------------------|------------------------------|----------------------------------------------|
+| Input  | `/pose_modelcars`     | `mocap_msgs/msg/RigidBodies` | Receives data from motion capture systems.   |
+| Output | `/loc_pose`         | `geometry_msgs/msg/PoseStamped` | Publishes processed pose information.     |
 
 > :memo: **Note:** Repository named as **"adapt_loc"**. 
 
@@ -149,12 +144,14 @@ Behaviour Planning integrates inputs from the Environmental Model and Route Comp
 
 
 ### [Live Tracker](https://git.hs-coburg.de/ADAPT/adapt_livtrac)
-The component takes data from localization component and sends the live location to the user interfaces
+The Live Tracker component is provides real-time localization and status updates of the ego vehicle. It is specifically designed to communicate live positional data and notifications directly to a mobile interface, enhancing monitoring and control capabilities.
 
-| In/Out | Topic Name| Message Type | Description | 
-| --------- | ---------- | ---------- | ----------- |
-| Input | /vehicle_location| PoseStamped | The location of the EV att all time from the localisation unit. |
-| Output | /live_loc| PoseStamped| The live location of the EV during its parking manoeuver. |
+
+| In/Out | Topic Name            | Message Type               | Description                                            |
+|--------|-----------------------|----------------------------|--------------------------------------------------------|
+| Input  | `/loc_pose`           | `geometry_msgs/msg/PoseStamped` | Receives current pose updates from vehicle's localization system. |
+| Input  | `/route`              | `geometry_msgs/msg/PoseArray`   | Receives predefined route data for navigation guidance. |
+| Output | `/live_loc`           | `adapt_msgs/msg/LiveTrack`      | Publishes live tracking information including vehicle's positional and status data. |
 
 > :memo: **Note:** Repository named as **"adapt_livtrac"**.  
 
@@ -261,7 +258,7 @@ The number of messages in this repository well change depending on the need of a
 | ---------- | ---------- | ----------- |
 | /ev_location | VehData |The converted CAM messages from other vehicles for environment model |
 | /act_cmd | CarCom | actuator commands | 
-
+| /live_loc | LiveTrack | The custom message contain the pose of the EV and current status (Parked, Moving) | 
 > :memo: **Note:** Repository named as **"adapt_msgs"**.
 
 ## Installation Instructions
@@ -303,3 +300,4 @@ ros2 launch realsense_examples rs_camera.launch.py
 ```bash
     ros2 launch ros_deep_learning detectnet.ros2.launch
 ```
+> :memo: **Note:** Maintainer: **Ibrahim Al Dabbagh**. 
