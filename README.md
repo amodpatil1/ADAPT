@@ -15,19 +15,18 @@ Parking Autonomously to the Nearest Feasible Parking Spot
  1. Infrastructure monitors parking spots in the vicinity.
  2. User is at their destination.
 
-* **Success Guarantee:** EV parked and locked at the nearest feasible spot.
+* **Success Guarantee:** EV parked at the selected spot according to the user preferences.
 
 * **Steps:**  
-    1. User exits car & commands vehicle to park; vehicle locks after door closes.
-    2. EV initiates communication with infrastructure for parking spot list.
+    1. User starts the process by selecting desired preferences on the VI.
+    2. EV initiates communication with infrastructure for parking spots list.
     3. EV receives available spot data from infrastructure.
-    4. EV computes nearest feasible parking spots.
-    5. EV sends confirmation to infrastructure about the chosen spot.
-    6. EV selects best route to the parking spot.
-    7. EV drives to and parks at the spot, checking for obstacles.
-    8. If spot is inaccessible, EV requests an alternative spot from infrastructure.
+    4. EV sends confirmation to infrastructure about the chosen spot.
+    5. EV selects best route to the parking spot.
+    6. EV drives autonomously and parks at the spot.
+    7. User can live track his EV using the MI
 
-# Architecture v2.0
+# Architecture v3.0
 Considering the nature of our project and due to the fact that is dealing with two saparete systems, we had to split our architecture into 2 blocks diagrams, one for the **Infrastructre** and one for **Ego-Vehicle**. These two parts will communicate with each other through **V2X** communication.
 
 ## [Infrastructre Block Diagram ](https://git.hs-coburg.de/ADAPT/adapt_main/src/branch/main/images/archi_v3_2.jpg)
