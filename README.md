@@ -207,7 +207,7 @@ The transceiver is responsible for sending and receiving messages from the EV to
 #### This section will be devided into 3 parts accoring to the Architecture as Sense, Plan, and Act.
 ## 1. Sense 
 
-###[parking spot detection for infrastructure](https://git.hs-coburg.de/ADAPT/adapt_inf_od)
+### [parking spot detection for infrastructure](https://git.hs-coburg.de/ADAPT/adapt_inf_od)
 This component outlines how parking spots are autonomously selected, communicated to the User Interface (UI), transmitted to the infrastructure, and updated for vehicle access. By understanding these processes, stakeholders gain insight into our system's functionality and architecture.
 
 | In/Out  | Topic Name                        | Message Type | Description                          |
