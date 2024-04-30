@@ -166,13 +166,13 @@ This component is for the environment perception for the ADAPT System. It reciev
 
 
 ### [Route Computer](https://git.hs-coburg.de/ADAPT/adapt_roucomp)
-Route computer is the process of figuring out the optimum route for the vehicle to take from where it is to the parking spot that has been selected. The planning of a safe and effective route for the car to reach its destination makes this an essential part of the total autonomous parking system. 
+Route computer is a component which determines the process of figuring out the optimum route to the selected parking spot. It outputs an effective route for the EV to reach its selected parking spot which is further sent to Behaviour Planning.
 
+Note: For this module Route Computer is generating a straight path for the EV in the form of waypoints according to the model city.
 | In/Out | Topic Name| Message Type | Description | 
 | --------- | ---------- | ---------- | ----------- |
 | Input | /loc_pose | PoseStamped | The current position of our vehicle |
 | Input | /spot_location | PoseStamped | The selected parking spot's location from UI |
-| Input | /map_data | OccupancyGrid | The local map data from localization |
 | Output | /route | PoseArray | A optimum route from the vehicle's location to the parking spot|
 
 > :memo: **Note:** Repository named as **"adapt_roucomp"**. 
