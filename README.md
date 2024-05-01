@@ -57,7 +57,7 @@ This sequence diagram illustrates the communication flow between the autonomous 
 
 ### [Vehicle Interface](https://git.hs-coburg.de/ADAPT/adapt_vi)
 Vehicle Interface :
-The Vehicle Interface generates a Graphical Interface for ADAPT. The first frame is the introduction to the Adapt system with a "GO" button which takes the user to 2nd frame in which the user is able to type in the Name, Liscence plate number and select a checkbox for Preferecne of parking. 
+The Vehicle Interface generates a Graphical Interface for ADAPT. The first frame is the introduction to the Adapt system with a "GO" button which takes the user to 2nd frame in which the user is able to type in the Name, Liscence plate number and select a checkbox for Preference of parking. 
 
 The options for Parking preference are "Zone 1" (Paid E-charging), "Zone 2" (Free) and "Park Anywhere".
 
