@@ -8,10 +8,10 @@ def generate_launch_description():
             executable='map',  
             name= 'mapping'              
         ),
-       Node(
-            package='adapt_loc',
-            executable='localization',
-            name='localization'
+       #Node(
+            #package='adapt_loc',
+            #executable='localization',
+            #name='localization'
         ),
         
         Node(

@@ -5,7 +5,7 @@ def generate_launch_description():
     return LaunchDescription([
         Node(
             package='adapt_behplan',     
-            executable='beh_node',  
+            executable='planner',  
             name= 'beh_plan' 
         ),
         Node(
@@ -14,9 +14,10 @@ def generate_launch_description():
             name= 'route_comp' 
         ),
         Node(
-            package='adapt_latloncon',     
+            package='adapt_latlongcon',     
             executable='latlong',  
             name= 'latlong_node' 
-        )                                 
-            
+          
+        ),
+        
     ])              
