@@ -13,10 +13,10 @@ def generate_launch_description():
             executable='route_node',  
             name= 'route_comp' 
         ),
-        #Node(
-            #package='adapt_latloncon',     
-            #executable='latlong',  
-            #name= 'latlong_node' 
-        #)                                 
+        Node(
+            package='adapt_latloncon',     
+            executable='latlong',  
+            name= 'latlong_node' 
+        )                                 
             
     ])              
