@@ -1,7 +1,11 @@
 repositories:
-  adapt_ui:
+  adapt_vi:
     type: git
-    url: https://git.hs-coburg.de/ADAPT/adapt_ui.git
+    url: https://git.hs-coburg.de/ADAPT/adapt_vi.git
+    version: main
+  adapt_mi:
+    type: git
+    url: https://git.hs-coburg.de/ADAPT/adapt_mi.git
     version: main
   adapt_obj:
     type: git
@@ -43,6 +47,10 @@ repositories:
     type: git
     url: https://git.hs-coburg.de/ADAPT/adapt_inf_spotupd.git
     version: master
+  adapt_inf_trans:
+    type: git
+    url: https://git.hs-coburg.de/ADAPT/adapt_inf_trans.git
+    version: master  
   v2x:
     type: git
     url: https://git.hs-coburg.de/Autonomous_Driving/v2x.git
