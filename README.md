@@ -238,15 +238,14 @@ Parking spot updater updates the parking spot list in the Infrastructure data ba
 
 ## 3. Act
 ### [Infrastructure Transceiver](https://git.hs-coburg.de/ADAPT/adapt_inf_transceiver)
-...........
+The infrastructure transceiver is like a translator that changes the parking spot list into an EVCSN message. It listens to the parking spot list that's shared under the topic "/spot_list" and then translates that information into the EVCSN message.
 
 | In/Out | Topic Name| Message Type | Description | 
 | --------- | ---------- | ---------- | ----------- |
-| Input | /occupant_info|  | The occupant_info for creating Unique ID | |
-| Input |/object_list | |objects in and around the parking spot | |
-| Output | /updated_list |  | Updated parking spot List | 
+| Input| /spot_list| string | List of unoccupied and available spots |
+| Output | /evcsn_msg| EVCSN | List of unoccupied and available spots|
 
-> :memo: **Note:** Repository named as **"adapt_inf_transceiver"**.
+> :memo: **Note:** Repository named as **"adapt_inf_trans"**.
 
 ### Custom Messages
 ### [adapt Messages](https://git.hs-coburg.de/ADAPT/adapt_msgs)
