@@ -18,11 +18,7 @@ def generate_launch_description():
             package='adapt_transceiver',     
             executable='transceiver_node',  
             name= 'transceiver' 
-        ),
-        Node(
-            package='adapt_transceiver',     
-            executable='cpm',  
-            name= 'CPM' 
+       
         )                                
             
     ])              
