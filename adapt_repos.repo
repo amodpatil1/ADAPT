@@ -39,9 +39,9 @@ repositories:
     type: git
     url: https://git.hs-coburg.de/ADAPT/adapt_transceiver.git
     version: main
-  adapt_spotupd:
+  adapt_inf_spotupd:
     type: git
-    url: https://git.hs-coburg.de/ADAPT/adapt_spotupd.git
+    url: https://git.hs-coburg.de/ADAPT/adapt_inf_spotupd.git
     version: main
   v2x:
     type: git
