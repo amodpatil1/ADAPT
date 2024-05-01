@@ -21,8 +21,8 @@ def generate_launch_description():
         ) ,
         Node(
             package='adapt_inf_trans',     
-            executable='inf_trans5',  
-            name= 'trial5' 
+            executable='inf_trans1',  
+            name= 'inf_trans1' 
         ) 
 
                                 
