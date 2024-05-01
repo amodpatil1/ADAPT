@@ -33,7 +33,7 @@ Considering the nature of our project and due to the fact that is dealing with t
 ![Infrastructre Block Diagram](https://git.hs-coburg.de/ADAPT/adapt_main/raw/branch/main/images/archi_v3_2.jpg)
 
 ## [Ego-Vehicle Block Diagram ](https://git.hs-coburg.de/ADAPT/adapt_main/raw/branch/main/images/Team%20Green%20-%20ADAPT.png)
-![Ego-Vehicle Block Diagram](https://git.hs-coburg.de/ADAPT/adapt_main/raw/branch/main/images/ego-veihcle-v3.png)
+![Ego-Vehicle Block Diagram](https://git.hs-coburg.de/ADAPT/adapt_main/raw/branch/main/images/Team%20Green%20-%20ADAPT.png)
 
 # UML Diagrams 
 
@@ -55,61 +55,60 @@ This sequence diagram illustrates the communication flow between the autonomous 
 #### This section will be devided into 3 parts accoring to the Architecture as Sense, Plan, and Act.
 ## 1. Sense 
 
-### [User Interface](https://git.hs-coburg.de/ADAPT/adapt_ui)
+### [Vehicle Interface](https://git.hs-coburg.de/ADAPT/adapt_vi)
 Vehicle Interface :
-The User Interface 1 is the primary interaction of the User with the ADAPT. The User Interface 1 aids the user to input their Information to the system and then give command to park the vehicle, which inturn initializes the system. It is present in the Ego Vehicle.
 
-Mobile Interface:
-The User Interface 2 (present on user's hand) aids the User to track the location of the Ego vehicle at all times also it displays the location where the Ego vehicle is going to be parked.
+The Vehicle Interface generates a Graphical Interface for ADAPT. The first frame is the introduction to the Adapt system with a "GO" button which takes the user to 2nd frame in which the user is able to type in the Name, Liscence plate number and select a checkbox for Preferecne of parking. 
 
-#### Vehicle Interface
+The options for Parking preference are "Zone 1" (Paid E-charging), "Zone 2" (Free) and "Park Anywhere".
+
+After providing the input the user can press the "START" button. 
+
+If for any reason the user wants to cancel the proces then a "CANCEL" button is also available on the interface which will cancel the entire process. 
+
 | In/Out | Topic Name| Message Type | Description | 
 | --------- | ------------ | ---------- | ----------- |
-| Input | /info_info | string | The occupant_info for creating Unique ID |
-| Input | /loc_pose | PoseStamped | The current position of Ego vehicle (EV) |
-| Input | /selected_spot_location | PoseStamped| The selected parking spot for the EV.|
-| Output | /spot_location | PoseStamped | The location of the selected spot to park.|
-| Output | /occupant_info| string | The information of occupant details, selected parking spot and EV location.|
+| Input | /| string | The details of the user with preferences for parking. |
+| Output | `/vi_start`| string | A user ID is generated in the backend and sent along with preferenc and Start command.|
+| Output | `/vi_cancel`| string | The message to cancel the process.|
 
-#### Mobile Interface
-* Key Features
-1. **Real-Time Location Tracking**: The interface displays a live map (Model City) showing the current location of the Ego vehicle. This feature enable users to monitor the vehicle’s movement and ensure it reaches the intended destination safely.
-2. **Vehicle Status Indication**: Users can see at a glance whether the vehicle is parked or still in motion. This information is presented through a toggle switch that shows 'Moving' or 'Parked', providing immediate understanding of the vehicle's state.
-3. **Parking Preferences**: The app allows users to view their chosen parking preferences. Options include paid electronic charging parking spots, free parking areas, or any available spot. 
+> :memo: **Note:** Repository named as **"adapt_vi"**.
+
+### [Mobile Interface](https://git.hs-coburg.de/ADAPT/adapt_mi)
+Mobile Interface:
+The ADAPT mobile interface is designed to provide real-time tracking and control of a vehicle, specifically referred to as the Ego vehicle (EV), through a user-friendly mobile application. This interface enables users to monitor their vehicle's status and location, ensuring a seamless interaction with their vehicle’s autonomous features.
+
 
 > :memo: **Note:** Repository named as **"adapt_mi"**.  
 
 
 ### [Localization](https://git.hs-coburg.de/ADAPT/adapt_loc)
 
-The localization component provides a precise location of the Ego-Vehicle with respect to its environment. It is designed to handle real-time localization data from motion capture systems used in the Model City. It processes incoming data from the motion capture system, and publishes X, Y, Z positions and orientation (Euler angles). The component leverages quaternion to Euler conversion to provide intuitive angle representations.
+The localization component provides a precise location of the Ego-Vehicle with respect to its environment. It is designed to handle real-time localization data from motion capture systems used in the Model City. It processes incoming data from the motion capture system, and publishes X,Y positions relative to X0,Y0 for the MOCAP system along with the orientation on Z axis.systems.
 
 | In/Out | Topic Name          | Message Type                 | Description                                  |
 |--------|---------------------|------------------------------|----------------------------------------------|
 | Input  | `/pose_modelcars`     | `mocap_msgs/msg/RigidBodies` | Receives data from motion capture systems.   |
 | Output | `/loc_pose`         | `geometry_msgs/msg/PoseStamped` | Publishes processed pose information.     |
-| Output | `/eular_angels`         | `geometry_msgs/msg/Vector3` | Publishes Euler angles representing orientation.     |
 
 > :memo: **Note:** Repository named as **"adapt_loc"**. 
 
 
 ### [Object Detection](https://git.hs-coburg.de/ADAPT/adapt_obj)
 
-Our DetectNet model has been trained to recognize several classes of objects which are integral to the autonomous driving context. These classes, annotated in the dataset, include:
+> :warning: **Important Update:** Currently, We have decided to use the DetectNet Object Detection  in our implementation.
 
-- **Person**: Individuals dummies in the model city.
-- **traffic_light**: Signalling devices positioned at road intersections, pedestrian crossings, and other locations to control flows of traffic.
-- **potted plant**: Trees, shrubs, and other plant within the model city.
-- **car**: Cars, trucks, and other modes of transportation moving or stationary within the model city.
+For more information:
+- Basic Info on object detection: https://github.com/dusty-nv/jetson-inference
+- ROS node for jetson_inference: https://github.com/dusty-nv/ros_deep_learning
 
-Each class has been annotated with a unique color code for visual differentiation in the detection process.
-
-#### ROS2 Topics for Object Detection
+The object detection algorithms use visual data such as images, videos, and laser scan points to analyze and identify objects' locations. Identifying and understanding the surrounding environment is essential for safe vehicle navigation and parking. As a result, the information produced by the object detection process is provided to the Environment model.
 
 | In/Out | Topic Name| Message Type | Description | 
 | --------- | ---------- | ---------- | ----------- |
-| Input | /raw_images|  image_in | Raw input image | |
-| Output | /detectnet/detections | vision_msgs/Detection2DArray  | Detection results (Bounding boxes, class IDs, confidences) |
+| Input | /Raw images|  image_in| Raw input image | |
+| Output | /Detection| vision_msgs/Detection2DArray  | Detection results (Bounding boxes, class IDs, confidences) |
+
 
 > :memo: **Note:** Repository named as **"adapt_obj"**. 
 
@@ -120,13 +119,14 @@ Each class has been annotated with a unique color code for visual differentiatio
 ### [Parking Spot Selector](https://git.hs-coburg.de/ADAPT/adapt_spotsl)
 In our system, the EV receives a list of available parking spot from the infrastructure’s database then the Spot Selection component selects a most suitable parking spot based on predefined user preferences in UI
 
+## Component Interfaces
 | **In/Out** | **Topic Name**| **Message Type** | **Description** |
 | --------- | ---------- | ---------- | ----------- |
-| Input | /vi_data |  String | receives user preferences for parking spots, specifically whether they prefer free or paid parking  |
-| Input | /evcsn_msg|  ItsEVCSNData | receives data about available parking spots, including details about location and price  |
+| Input | /vi_start |  String| receives user preferences for parking spots, specifically whether they prefer free or paid parking  |
+| Input | /evcsn_msg|  EvcsnPdu| receives data about available parking spots, including details about location and price  |
 | Output | /selected_spot | PoseStamped | publishes the location of the parking spot selected based on the user's preference and spot availability | 
 
-> :memo: **Note:** Repository named as **"adapt_sposel"**.  
+> :memo: **Note:** Repository named as **"adapt_spotsl"**.  
 
 
 ### [Behaviour Planning](https://git.hs-coburg.de/ADAPT/adapt_bahplan) 
@@ -134,10 +134,10 @@ Behaviour Planning integrates inputs from the Environmental Model and Route Comp
 
 | In/Out | Topic Name| Message Type | Description | 
 | --------- | ---------- | ---------- | ----------- |
-| Input | /route|  nav_msgs/msg/Path| A optimum route from the vehicle's location to the parking spot | |
-| Input | /complete_model | OccupancyGrid| Complete model of where the vehicle is located with respect to its environment | |
-| Input | /loc_pose | PoseStamped|Location of Ego Vehicle | |
-| Output | /cmd_vel | geometry_msgs/Twist | linear and angular velocities of the vehicle |
+| Input | /route|PoseArray| A optimum route from the vehicle's location to the parking spot | |
+| Input |/complete_model |OccupancyGrid|Complete model of where the vehicle is located with respect to its environment | |
+| Input |/loc_pose |PoseStamped|Location of Ego Vehicle | |
+| Output |/act_cmd |Twist| linear and angular velocities of the vehicle |
 
 > :memo: **Note:** Repository named as **"adapt_behplan"**.  
 
@@ -160,10 +160,12 @@ This component is for the environment perception for the ADAPT System. It reciev
 
 | In/Out | Topic Name| Message Type | Description | 
 | --------- | ---------- | ---------- | ----------- |
-| Input | /detectnet/detections| Detection2DArray | The detectnet detections |
-| Input | /loc_pose| PoseStamped | The current position of our vehicle |
-| Input  | /dolly/LaserScan       | Scan | Detected objecte distance measurements for Environment model component     |
-| Output | /complete_model| OcupancyGrid | Complete model of where the vehicle is located with respect to its environment|
+| Input | `/detectnet/detections`| `Detection2DArray` | The detectnet detections |
+| Input | `/loc_pose`| `PoseStamped` | The current position of our vehicle |
+| Input | `/dolly/LaserScan` | `Scan `| The LiDAR detections |
+| Input | `/ev_location`| `VehData` | The pose and orientation of other cars|
+| Output | `/car_marker_{id}`| `Marker` | These are visualization messages of the poses and orientations of our car and other cars that are transmitting CAM messgae|
+| Output | `/complete_model`| `OccupancyGrid` | Complete model of where the vehicle is located with respect to its environment|
 
 > :memo: **Note:** Repository named as **"adapt_envmod"**.  
 
@@ -186,9 +188,9 @@ Note: For this module Route Computer is generating a straight path for the EV in
 The lateral and longitudinal control refers to steering and speed management: lateral control governs side-to-side steering for lane positioning, while longitudinal control manages forward and backward motion, including acceleration and deceleration.
 
 | In/Out | Topic Name| Message Type | Description | 
-| --------- | ---------- | ---------- | ----------- | 
-| Input | /cmd_vel |  geometry_msgs/Twist | speed specifications |
-| Output | /act_cmd | adapt_msgs/CarCom | actuator commands to steer and accelerate the vehicle |
+| --------- | ---------- | ---------- | ----------- |
+| Input | /act_cmd  | geometry_msgs/Twist | linear and angular velocities of the vehicle |
+| Output | /cmd_vel| adapt_msgs/CarCom | speed and steering angle commands to the actuators |
 
 > :memo: **Note:** Repository named as **"adapt_latlongcon"**. 
 
@@ -198,11 +200,13 @@ The transceiver is responsible for sending and receiving messages from the EV to
 
 | In/Out | Topic Name| Message Type | Description | 
 | --------- | ---------- | ---------- | ----------- |
-| Input | /loc_pose| PoseStamped | The location of the EV.|
-| Input | /detectnet/detctions| Detection2DArray | The objection detection list to Infrastructure |
-| Output | /ev_location| VehData | The converted CAM messages from other vehicles for environment model|
-| Output | /cam_msgs | CAM |It is responsible for publishing the CAM messages for V2X application|
-| Output | /detected_objects | CPM |It is responsible for publishing the CPM messages for V2X application|
+| Input | `/loc_pose`| `PoseStamped` | The location of the EV.|
+| Input | `/detectnet/detctions`| `Detection2DArray` | The objection detection list to Infrastructure |
+| Input | `/selected_spot_location`| `PoseStamped` | The objection detection list to Infrastructure |
+| Output | `/ev_location`| `VehData` | locations of all vehicles |
+| Output | `/selected_spot`| `PoseStamped` | The selected parking location.|
+| Output | `/cam_msg` | `CAM` |It is responsible for publishing the CAM messages of ego vehicle for V2X application|
+| Output | `/detected_objects` | `CPM` |It is responsible for publishing the CPM messages for V2X application|
 
 > :memo: **Note:** Repository named as **"adapt_transceiver"**. 
 
@@ -230,22 +234,24 @@ Parking spot updater updates the parking spot list in the Infrastructure data ba
 
 | In/Out | Topic Name| Message Type | Description | 
 | --------- | ---------- | ---------- | ----------- |
-| Input | /occupant_info|  | The occupant_info for creating Unique ID | |
-| Input |/object_list | |objects in and around the parking spot | |
-| Output | /updated_list |  | Updated parking spot List | 
+| Input | /selected_spot| string | The selected spot from the available spots|
+| Input | /vi_cancel| string | It cancels the selected spot |
+| Input | /occupancy_status| Detections2DArray | List of tota; spots including Occupied and unOccupied spots |
+| Output | /spot_list| string | List of unoccupied and available spots |
+
 
 > :memo: **Note:** Repository named as **"adapt_inf_spotupd"**.
 
 ## 3. Act
 ### [Infrastructure Transceiver](https://git.hs-coburg.de/ADAPT/adapt_inf_transceiver)
-The infrastructure transceiver is like a translator that changes the parking spot list into an EVCSN message. It listens to the parking spot list that's shared under the topic "/spot_list" and then translates that information into the EVCSN message.
+...........
 
 | In/Out | Topic Name| Message Type | Description | 
 | --------- | ---------- | ---------- | ----------- |
 | Input| /spot_list| string | List of unoccupied and available spots |
 | Output | /evcsn_msg| EVCSN | List of unoccupied and available spots|
 
-> :memo: **Note:** Repository named as **"adapt_inf_trans"**.
+> :memo: **Note:** Repository named as **"adapt_inf_transceiver"**.
 
 ### Custom Messages
 ### [adapt Messages](https://git.hs-coburg.de/ADAPT/adapt_msgs)
@@ -298,4 +304,4 @@ ros2 launch realsense_examples rs_camera.launch.py
 ```bash
     ros2 launch ros_deep_learning detectnet.ros2.launch
 ```
-> :memo: **Note:** Maintainer: **Ibrahim Al Dabbagh**. 
+> :memo: **Note:** Maintainer: **TEAM ADAPT**. 
