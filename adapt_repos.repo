@@ -42,7 +42,7 @@ repositories:
   adapt_inf_spotupd:
     type: git
     url: https://git.hs-coburg.de/ADAPT/adapt_inf_spotupd.git
-    version: main
+    version: master
   v2x:
     type: git
     url: https://git.hs-coburg.de/Autonomous_Driving/v2x.git
