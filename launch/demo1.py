@@ -16,8 +16,8 @@ def generate_launch_description():
         ) ,
         Node(
             package='adapt_inf_spotupd',
-            executable='spot_upd6',
-            name='trial6'
+            executable='spot_upd2',
+            name='adapt_inf_spotupd'
         ) ,
         Node(
             package='adapt_inf_trans',     
