@@ -123,7 +123,7 @@ In our system, the EV receives a list of available parking spot from the infrast
 | **In/Out** | **Topic Name**| **Message Type** | **Description** |
 | --------- | ---------- | ---------- | ----------- |
 | Input | /vi_start |  String| receives user preferences for parking spots, specifically whether they prefer free or paid parking  |
-| Input | /evcsn_msg|  EvcsnPdu| receives data about available parking spots, including details about location and price  |
+| Input | /evcsn_msg|  ItsEVCSNData| receives data about available parking spots, including details about location and price  |
 | Output | /selected_spot | PoseStamped | publishes the location of the parking spot selected based on the user's preference and spot availability | 
 
 > :memo: **Note:** Repository named as **"adapt_spotsl"**.  
