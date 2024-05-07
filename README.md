@@ -265,6 +265,42 @@ The number of messages in this repository well change depending on the need of a
 | /live_loc | LiveTrack | The custom message contain the pose of the EV and current status (Parked, Moving) | 
 > :memo: **Note:** Repository named as **"adapt_msgs"**.
 
+
+## Module 4
+
+# Architecture v4.0
+
+## [Infrastructre Block Diagram ](https://git.hs-coburg.de/ADAPT/adapt_main/src/branch/main/images/infra_architec_module_4.jpg)
+![Infrastructre Block Diagram](https://git.hs-coburg.de/ADAPT/adapt_main/raw/branch/main/images/infra_architec_module_4.jpg)
+
+## [Ego-Vehicle Block Diagram ](https://git.hs-coburg.de/ADAPT/adapt_main/raw/branch/main/images/images/ev_architec_module_4.jpg)
+![Ego-Vehicle Block Diagram](https://git.hs-coburg.de/ADAPT/adapt_main/raw/branch/main/imagesimages/ev_architec_module_4.jpg)
+
+In this module we have updated our system architecture for both the Infrastructure and the EV.
+
+
+
+
+# User Stories
+
+
+
+# Functionalities
+
+
+
+# Dependencies
+
+
+
+
+
+
+
+
+
+
+
 ## Installation Instructions
 
 1. Clone the repository:
