@@ -118,6 +118,10 @@ notifications directly to a mobile interface, enhancing monitoring and control c
 This component is responsible for the environment perception for the ADAPT. It recieves 
 detected objects from LiDAR and detectnet and the vehicle position through Localization 
 component and publishes them in the form of OccupancyGrid for the rest of the system. 
+
+#### Note  
+For the 4th module the component is visualizing the ego-vehicle and other cars on a gridmap with respect to the model city. This component shall be further developed taking in consideration, the detections from camera and LiDAR in upcoming modules
+
 ### [Behaviour Planning](https://git.hs-coburg.de/ADAPT/adapt_behplan.git)
 Behaviour Planning integrates inputs from the Environment Model and Route Computer, 
 determining the vehicle's path, speed, and manoeuvres based on the inputs from the 
