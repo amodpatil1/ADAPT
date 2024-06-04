@@ -55,10 +55,6 @@ repositories:
     type: git
     url: https://git.hs-coburg.de/Autonomous_Driving/v2x.git
     version: students_msgs
-  ros_deep_learning:
-    type: git
-    url: https://github.com/dusty-nv/ros_deep_learning.git
-    version: master
   adapt_msgs:
     type: git
     url: https://git.hs-coburg.de/ADAPT/adapt_msgs.git 
