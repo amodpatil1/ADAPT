@@ -77,6 +77,7 @@ In this module we have updated our system architecture for both the Infrastructu
 | [Parking Spot Updater](https://git.hs-coburg.de/ADAPT/adapt_inf_spotupd.git) | Swati Upadhyay |
 | [Trajectory Planner](https://git.hs-coburg.de/ADAPT/adapt_trajp.git) | Anish Patil |
 | [Infrastructure Object Detection](https://git.hs-coburg.de/ADAPT/adapt_inf_spotupd.git) | Swati Upadhyay |
+| [MObile Interface](https://git.hs-coburg.de/ADAPT/adapt_mobint.git) | Ritwik Ranjit |
 
 
 ## Functionalities
