@@ -42,9 +42,9 @@ This sequence diagram illustrates the communication flow between the autonomous 
 > :memo: **Note:** Diagram is named **Sequence Diagram** the `images` folder. 
 
 
-# Module 4
+# Module 5
 
-## Architecture v4.0
+## Architecture v5.0
 
 ## [Infrastructre Block Diagram ](https://git.hs-coburg.de/ADAPT/adapt_main/src/branch/main/images/infra_architec_module_4.jpg)
 ![Infrastructre Block Diagram](https://git.hs-coburg.de/ADAPT/adapt_main/raw/branch/main/images/infra_architec_module_4.jpg)
@@ -67,12 +67,14 @@ In this module we have updated our system architecture for both the Infrastructu
 | [Route Computer](https://git.hs-coburg.de/ADAPT/adapt_roucomp.git)  | Riddhesh Dalvi |
 | [Localization](https://git.hs-coburg.de/ADAPT/adapt_loc.git)  | Ibrahim Al-Dabbagh |
 | [Environment Model](https://git.hs-coburg.de/ADAPT/adapt_envmod.git)  | Harsh Patil |
-| [Behaviour Planning](https://git.hs-coburg.de/ADAPT/adapt_behplan.git) | Amod Patil & Anish Patil|
+| [Behaviour Planning](https://git.hs-coburg.de/ADAPT/adapt_behplan.git) | Amod Patil |
 | [Lateral and Longitudinal Control](https://git.hs-coburg.de/ADAPT/adapt_latlongcon.git) |Anish Patil |
 | [EV Transceiver](https://git.hs-coburg.de/ADAPT/adapt_envmod.git) | Harsh Patil & Anish Patil |
 | [Infrastructure Transceiver](https://git.hs-coburg.de/ADAPT/adapt_inf_trans.git)  | Swati Upadhyay |
 | [Live Tracker](https://git.hs-coburg.de/ADAPT/adapt_livtrac.git) | Ibrahim Al-Dabbagh |
 | [Parking Spot Updater](https://git.hs-coburg.de/ADAPT/adapt_inf_spotupd.git) | Swati Upadhyay |
+| [Trajectory Planner](https://git.hs-coburg.de/ADAPT/adapt_trajp.git) | Anish Patil |
+| [Infrastructure Object Detection](https://git.hs-coburg.de/ADAPT/adapt_inf_spotupd.git) | Swati Upadhyay |
 
 
 ## Functionalities
