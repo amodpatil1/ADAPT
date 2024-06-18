@@ -43,20 +43,22 @@ This sequence diagram illustrates the communication flow between the autonomous 
 
 
 # Module 5
-
+## Project Management
 ## Architecture v5.0
 
 ## [Infrastructre Block Diagram ](https://git.hs-coburg.de/ADAPT/adapt_main/src/branch/main/images/infra_architec_module_4.jpg)
-![Infrastructre Block Diagram](https://git.hs-coburg.de/ADAPT/adapt_main/raw/branch/main/images/infra_architec_module_4.jpg)
+![Infrastructre Block Diagram](https://git.hs-coburg.de/ADAPT/adapt_main/raw/branch/main/images/Team%20Green%20-%20ADAPT_EV.jpg)
 
 ## [Ego-Vehicle Block Diagram ](https://git.hs-coburg.de/ADAPT/adapt_main/raw/branch/main/images/images/ev_architec_module_4.jpg)
-![Ego-Vehicle Block Diagram](https://git.hs-coburg.de/ADAPT/adapt_main/raw/branch/main/images/ev_architec_module_4.jpg)
+![Ego-Vehicle Block Diagram](https://git.hs-coburg.de/ADAPT/adapt_main/raw/branch/main/images/Team%20Green%20-%20ADAPT.jpg)
 
 In this module we have updated our system architecture for both the Infrastructure and the EV. We have added parking spot updater and infrastructure’s transceiver to the system architecture of the Infrastructure. Similarly to the EV infrastructure we have shifted the parking spot selector to plan phase of the EV architecture and changed UI1 to vehicle interface and U2 to mobile interface.
 
 
 ## User Stories
 ![User Stories ](https://git.hs-coburg.de/ADAPT/adapt_main/raw/branch/main/images/user_stories.jpg)
+
+:bulb: Updated Storymap for Module 5 Criterias is on the miro: `https://miro.com/app/board/uXjVNZyhSJg=/`
 
 ## Component Responsibilities
 
