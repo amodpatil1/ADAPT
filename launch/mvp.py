@@ -54,5 +54,10 @@ def generate_launch_description():
             package='adapt_latlongcon',
             executable='pp',
             name='path_tracking'
+        ),
+        Node(
+            package='adapt_mobint',
+            executable='minode',
+            name='adaptmi'
         )
     ])

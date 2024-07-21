@@ -1,56 +1,24 @@
 from launch import LaunchDescription
 from launch_ros.actions import Node
+from launch.launch_description_sources import PythonLaunchDescriptionSource
+from launch.actions import IncludeLaunchDescription
+from launch_ros.substitutions import FindPackageShare
 
 def generate_launch_description():
+    # Find the share directory of the car_description package
+    car_description_share = FindPackageShare('car_description').find('car_description')
+
+    publish_model_launch_file = car_description_share + '/launch/publish_model.launch.py'
+
     return LaunchDescription([
-        Node(
-            package='adapt_envmod',  
-            executable='env_node',   
-            name= 'envmod'           
-            
-        ),
-        
-        Node(
-            package='adapt_roucomp', 
-            executable='route_node',
-            name='roucomp'
-            
-        ),
-        Node(
-            package='adapt_ui',
-            executable='vehicleinterface_node',
-            name='vehicle_interface'
-        ),
- 
-        
-        Node(
-            package='adapt_behplan',
-            executable='behaviour_node',
-            name='behplan'
+        IncludeLaunchDescription(
+            PythonLaunchDescriptionSource(publish_model_launch_file)
         ),
 
         Node(
-            package='adapt_transmitter',     
-            executable='transmitter_node',  
-            name= 'transmitter_data'          
-            
-        ),
-        Node(
-            package='adapt_latlongcon',             
-            executable='latlong_node',   
-            name= 'latlongcon'           
-            
-        ),
-        Node(
-            package='adapt_lanboun',           
-            executable='lane_detection_node',   
-            name= 'lane_detection'           
-            
-        ),           
-        Node(
-            package='adapt_loc',
-            executable='localization',
-            name='localization'
+            package='adapt_vi',     
+            executable='gvi_node',  
+            name='vi'
         ),
         Node(
             package='adapt_spotsl',
@@ -58,14 +26,63 @@ def generate_launch_description():
             name='spotsl'
         ),
         Node(
-            package='adapt_livtrac',
-            executable='livetrac_node',
-            name='livetracker'
+            package='adapt_loc',
+            executable='localization',
+            name='localization'
+        ),
+        Node(
+            package='adapt_roucomp',     
+            executable='route',  
+            name='routemodule5'
+        ),
+        Node(
+            package='adapt_trajp',
+            executable='traj',
+            name='trajectory_planner'
+        ),
+        Node(
+            package='adapt_envmod',
+            executable='env_mode',
+            name='envmod'
+        ),
+        Node(
+            package='adapt_envmod',
+            executable='map',
+            name='mapping'
         ),
         Node(
             package='adapt_latlongcon',
-            executable='latlong',
-            name='latlong_node'
+            executable='pp',
+            name='path_tracking'
         ),
-
+        Node(
+            package='adapt_behplan',
+            executable='behstate',
+            name='statemac_1'
+        ),
+        Node(
+            package='adapt_mobint',
+            executable='minode',
+            name='adaptmi'
+        ),
+        Node(
+            package='adapt_transceiver',
+            executable='transceiver_node',
+            name='transceiver'
+        ),
+        Node(
+            package='adapt_transceiver',
+            executable='cpm',
+            name='CPM'
+        ),
+        Node(
+            package='adapt_inf_spotupd',
+            executable='spot_upd1',
+            name='spot_upd1'
+        ),
+        Node(
+            package='adapt_inf_trans',
+            executable='inf_trans1',
+            name='inf_trans1'
+        )
     ])
