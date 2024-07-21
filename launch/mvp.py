@@ -45,11 +45,11 @@ def generate_launch_description():
             executable='env_mode',
             name='envmod'
         ),
-        Node(
-            package='adapt_envmod',
-            executable='map',
-            name='mapping'
-        ),
+        #Node(
+            #package='adapt_envmod',
+            #executable='map',
+            #name='mapping'
+        #),
         Node(
             package='adapt_latlongcon',
             executable='pp',
