@@ -42,7 +42,7 @@ def generate_launch_description():
         ),
         Node(
             package='adapt_envmod',
-            executable='env_mode',
+            executable='env_mod',
             name='envmod'
         ),
         #Node(
