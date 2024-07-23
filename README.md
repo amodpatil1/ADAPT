@@ -180,15 +180,11 @@ Hardware Depenency:
 ```bash
     ros2 launch infra_launch.py
 ```
-4. Now run the ros2_pcan node
-```bash
-    ros2 run ros2_pcan ros2pcan_node
-```
-5. Start RealSense camera:
+4. Start RealSense camera:
 ```bash
 ros2 launch realsense2_camera rs_launch.py
 ```
-6. Starting DetectNet:
+5. Starting DetectNet:
 ```bash
     ros2 launch ros_deep_learning detectnet.ros2.launch
 ```
