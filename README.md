@@ -42,7 +42,6 @@ This sequence diagram illustrates the communication flow between the autonomous 
 > :memo: **Note:** Diagram is named **Sequence Diagram** the `images` folder. 
 
 
-# Module 5
 ## Project Management
 ## Architecture v5.0
 
@@ -55,30 +54,24 @@ This sequence diagram illustrates the communication flow between the autonomous 
 In this module we have updated our system architecture for both the Infrastructure and the EV. We have added parking spot updater and infrastructure’s transceiver to the system architecture of the Infrastructure. Similarly to the EV infrastructure we have shifted the parking spot selector to plan phase of the EV architecture and changed UI1 to vehicle interface and U2 to mobile interface.
 
 
-## User Stories
-![User Stories ](https://git.hs-coburg.de/ADAPT/adapt_main/raw/branch/main/images/user_stories.jpg)
-
-:bulb: Updated Storymap for Module 5 Criterias is on the miro: `https://miro.com/app/board/uXjVNZyhSJg=/`
-
 ## Component Responsibilities
 
 | Component| Team Members  |
 |--------|-------------|
 | [Vehicle Interface](https://git.hs-coburg.de/ADAPT/adapt_vi.git) | Ritwik Ranjit |
 | [Parking Spot Selector](https://git.hs-coburg.de/ADAPT/adapt_spotsl.git)| Bakar |
-| [Route Computer](https://git.hs-coburg.de/ADAPT/adapt_roucomp.git)  | Riddhesh Dalvi |
+| [Route Computer](https://git.hs-coburg.de/ADAPT/adapt_roucomp.git)  | Riddhesh Dalvi & Ibrahim Al-Dabbagh |
 | [Localization](https://git.hs-coburg.de/ADAPT/adapt_loc.git)  | Ibrahim Al-Dabbagh |
 | [Environment Model](https://git.hs-coburg.de/ADAPT/adapt_envmod.git)  | Harsh Patil |
 | [Behaviour Planning](https://git.hs-coburg.de/ADAPT/adapt_behplan.git) | Amod Patil |
 | [Lateral and Longitudinal Control](https://git.hs-coburg.de/ADAPT/adapt_latlongcon.git) |Anish Patil |
 | [EV Transceiver](https://git.hs-coburg.de/ADAPT/adapt_envmod.git) | Harsh Patil & Anish Patil |
 | [Infrastructure Transceiver](https://git.hs-coburg.de/ADAPT/adapt_inf_trans.git)  | Swati Upadhyay |
-| [Live Tracker](https://git.hs-coburg.de/ADAPT/adapt_livtrac.git) | Ibrahim Al-Dabbagh |
 | [Parking Spot Updater](https://git.hs-coburg.de/ADAPT/adapt_inf_spotupd.git) | Swati Upadhyay |
 | [Trajectory Planner](https://git.hs-coburg.de/ADAPT/adapt_trajp.git) | Anish Patil |
 | [Infrastructure Object Detection](https://git.hs-coburg.de/ADAPT/adapt_inf_spotupd.git) | Swati Upadhyay |
 | [MObile Interface](https://git.hs-coburg.de/ADAPT/adapt_mobint.git) | Ritwik Ranjit |
-
+| [Spot Filter](https://git.hs-coburg.de/ADAPT/adapt_spot_filter.git) | Swati Upadhyay |
 
 ## Functionalities
 
@@ -114,32 +107,19 @@ quaternion to Euler conversion to provide intuitive angle representations.
 ### [Route Computer](https://git.hs-coburg.de/ADAPT/adapt_roucomp) 
 Route computer is a component which determines the process of figuring out the optimum 
 route to the selected parking spot. It outputs an effective route for the EV to reach its selected 
-parking spot which is further sent to Behaviour Planning. 
-### [Live Tracker](https://git.hs-coburg.de/ADAPT/adapt_livtrac)
-The LiveTracker component is essential for providing real-time localization and status updates 
-for the ego vehicle. It is specifically designed to communicate live positional data and 
-notifications directly to a mobile interface, enhancing monitoring and control capabilities. 
-### [Environmental Model](https://git.hs-coburg.de/ADAPT/adapt_envmod) 
+parking spot which is further sent to Trajectory Planner and the route_state gets published to the Behaviour Planning. 
+### [Environment Model](https://git.hs-coburg.de/ADAPT/adapt_envmod) 
 This component is responsible for the environment perception for the ADAPT. It recieves 
 detected objects from LiDAR and detectnet and the vehicle position through Localization 
 component and publishes them in the form of OccupancyGrid for the rest of the system. 
-
-#### Note  
-For the 4th module the component is visualizing the ego-vehicle and other cars on a gridmap with respect to the model city. This component shall be further developed taking in consideration, the detections from camera and LiDAR in upcoming modules
-
 ### [Behaviour Planning](https://git.hs-coburg.de/ADAPT/adapt_behplan.git)
-Behaviour Planning integrates inputs from the Environment Model and Route Computer, 
-determining the vehicle's path, speed, and manoeuvres based on the inputs from the 
-Environmental Model which gives the occupancy grid map and the Route computer which 
-Provides the optimal route towards the parking spot. After computing all the inputs, Behaviour 
-Planning outputs speed limits and manoeuvre commands in the form of a Twist message, which 
-are executed by the Lateral and Longitudinal Control systems. 
+Behaviour Planning is a decision making componenet which is a finite state machine which subscribes to specific topics and when triggers are received from those topics it transitions into specific states.
 ### [Lateral and Longitudinal control](https://git.hs-coburg.de/ADAPT/adapt_latlongcon.git) 
 In our system architecture, the vehicle's movement is controlled by the lateral and longitudinal 
 component. It takes the speed manoeuvres from the Behaviour planning component and then 
 sends the command via CAN BUS to the drive motor.
-
-
+### [Trajectory PLanner](https://git.hs-coburg.de/ADAPT/adapt_trajp.git) 
+The trajectory planner take care of smoothing the path generated by the path planning component(adapt_roucomp) with the help of interpolation, cubicspline has been implemented to carry out this task. The component also calculate the parking maneuver through circles and line segments.
 ## Dependencies
 Sofware Depenency:
 
@@ -151,11 +131,13 @@ Sofware Depenency:
 6. [Ros Deeplearning](https://git.hs-coburg.de/Autonomous_Driving/ros_deep_learning)
 7. [Realsense_Camera](https://github.com/IntelRealSense/realsense-ros)
 8. [nav2_bringup](https://github.com/open-navigation/navigation2/blob/main/nav2_bringup/README.md)
+9. [yasmin](https://github.com/uleroboticsgroup/yasmin)
  
 Hardware Depenency:
 
 1. Optitrack Mocap system
 2. Intel-Realsense Camera
+3. LiDAR
 
 
 ## Installation Instructions
@@ -185,35 +167,28 @@ Hardware Depenency:
 ```bash
     source install/setup.bash
 ```
-
 2. Navigate to the launch folder:
 ```bash
     cd launch
 ```
 3. Run the launch file with ROS 2:
- - To initiate the ADAPT we run the demo1 launch file where we run the Vehicle interface node, infrastructure tranceiver, parking spot selector nodes
+ - To initiate the ADAPT we run the adapt_launch launch file where we start the whole system in the EV
 ```bash
-    ros2 launch demo1.py
+    ros2 launch adapt_launch.py
 ```
-- To visualize the poses and the oreintations of the EV and the other cars (In order to visualize the poses and the orientation of the cars, make sure they are transmitting CAM messages.)
+- To initiate the ADAPT Infrastructre we run the infra_launch launch file where we start the Infrastructre
 ```bash
-    ros2 launch demo2.py
+    ros2 launch infra_launch.py
 ```
-- To Drive the EV, do the following:
-```bash
-    ros2 launch demo3.py
-```
-Now run the ros2_pcan node
+4. Now run the ros2_pcan node
 ```bash
     ros2 run ros2_pcan ros2pcan_node
 ```
-
-
-3. Start RealSense camera:
+5. Start RealSense camera:
 ```bash
 ros2 launch realsense2_camera rs_launch.py
 ```
-4. Starting DetectNet:
+6. Starting DetectNet:
 ```bash
     ros2 launch ros_deep_learning detectnet.ros2.launch
 ```
