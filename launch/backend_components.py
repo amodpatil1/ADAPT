@@ -30,6 +30,11 @@ def generate_launch_description():
             name='cpm'
         ),
         Node(
+            package='ydlidar',
+            executable='ydlidar_node',
+            name='ydlidar_node'
+        ),
+        Node(
             package='ros2_pcan',
             executable='ros2pcan_node',
             name='ros2pcan'
