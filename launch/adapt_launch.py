@@ -57,8 +57,8 @@ def generate_launch_description():
         ),
         Node(
             package='adapt_behplan',
-            executable='behstate',
-            name='statemac_1'
+            executable='behave',
+            name='beh'
         ),
         Node(
             package='adapt_mobint',
