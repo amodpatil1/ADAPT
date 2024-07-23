@@ -6,7 +6,7 @@ def generate_launch_description():
     return LaunchDescription([
         Node(
             package='adapt_envmod',
-            executable='env_mod',
+            executable='envmod',
             name='envmod'
         ),
         Node(
@@ -23,6 +23,11 @@ def generate_launch_description():
             package='adapt_transceiver',
             executable='transceiver_node',
             name='transceiver'
+        ),
+        Node(
+            package='adapt_transceiver',
+            executable='cpm',
+            name='cpm'
         ),
         Node(
             package='ros2_pcan',
