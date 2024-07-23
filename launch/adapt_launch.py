@@ -74,15 +74,5 @@ def generate_launch_description():
             package='adapt_transceiver',
             executable='cpm',
             name='CPM'
-        ),
-        Node(
-            package='adapt_inf_spotupd',
-            executable='spot_upd1',
-            name='spot_upd1'
-        ),
-        Node(
-            package='adapt_inf_trans',
-            executable='inf_trans1',
-            name='inf_trans1'
         )
     ])
