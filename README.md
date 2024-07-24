@@ -60,6 +60,13 @@ This sequence diagram illustrates the communication flow between the autonomous 
 <img src="https://git.hs-coburg.de/ADAPT/adapt_main/raw/branch/main/images/Story%20Map.png" alt="Vehicle Interface" title="Vehicle Interface" width="1050" height="450">
 </div>
 
+## [Milestones ](https://git.hs-coburg.de/ADAPT/adapt_main/raw/branch/main/images/Team%20Green%20-%20ADAPT%20%2815%29.jpg)
+
+<div align="center">
+<img src="https://git.hs-coburg.de/ADAPT/adapt_main/raw/branch/main/images/Team%20Green%20-%20ADAPT%20%2815%29.jpg" alt="Vehicle Interface" title="Vehicle Interface" width="1050" height="450">
+</div>
+
+
 
 ## Component Responsibilities
 
