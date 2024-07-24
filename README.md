@@ -26,6 +26,8 @@ Parking Autonomously to the Nearest Feasible Parking Spot
     6. EV drives autonomously and parks at the spot.
     7. User can live track his EV using the MI
 
+# PROJECT MANAGEMENT
+
 # UML Diagrams 
 
 ## [Acivity Diagram ](https://git.hs-coburg.de/ADAPT/adapt_main/src/branch/main/images/activity_diagram.png)
@@ -70,7 +72,7 @@ This sequence diagram illustrates the communication flow between the autonomous 
 | [Parking Spot Updater](https://git.hs-coburg.de/ADAPT/adapt_inf_spotupd.git) | Swati Upadhyay |
 | [Trajectory Planner](https://git.hs-coburg.de/ADAPT/adapt_trajp.git) | Anish Patil |
 | [Infrastructure Object Detection](https://git.hs-coburg.de/ADAPT/adapt_inf_spotupd.git) | Swati Upadhyay |
-| [MObile Interface](https://git.hs-coburg.de/ADAPT/adapt_mobint.git) | Ritwik Ranjit |
+| [Mobile Interface](https://git.hs-coburg.de/ADAPT/adapt_mobint.git) | Ritwik Ranjit |
 | [Spot Filter](https://git.hs-coburg.de/ADAPT/adapt_spot_filter.git) | Swati Upadhyay |
 
 ## Functionalities
