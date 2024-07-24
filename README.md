@@ -70,7 +70,7 @@ This sequence diagram illustrates the communication flow between the autonomous 
 | [EV Transceiver](https://git.hs-coburg.de/ADAPT/adapt_envmod.git) | Harsh Patil & Anish Patil |
 | [Infrastructure Transceiver](https://git.hs-coburg.de/ADAPT/adapt_inf_trans.git)  | Swati Upadhyay |
 | [Parking Spot Updater](https://git.hs-coburg.de/ADAPT/adapt_inf_spotupd.git) | Swati Upadhyay |
-| [Trajectory Planner](https://git.hs-coburg.de/ADAPT/adapt_trajp.git) | Anish Patil |
+| [Trajectory Planner](https://git.hs-coburg.de/ADAPT/adapt_trajp.git) | Anish Patil, Harsh Patil |
 | [Infrastructure Object Detection](https://git.hs-coburg.de/ADAPT/adapt_inf_spotupd.git) | Swati Upadhyay |
 | [Mobile Interface](https://git.hs-coburg.de/ADAPT/adapt_mobint.git) | Ritwik Ranjit |
 | [Spot Filter](https://git.hs-coburg.de/ADAPT/adapt_spot_filter.git) | Swati Upadhyay |
