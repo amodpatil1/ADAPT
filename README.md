@@ -41,8 +41,6 @@ This sequence diagram illustrates the communication flow between the autonomous 
 
 > :memo: **Note:** Diagram is named **Sequence Diagram** the `images` folder. 
 
-
-## Project Management
 ## Architecture 
 
 ## [Infrastructre Block Diagram ](https://git.hs-coburg.de/ADAPT/adapt_main/raw/branch/main/images/Team%20Green%20-%20ADAPT%20%2813%29.jpg)
