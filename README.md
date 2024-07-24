@@ -68,9 +68,10 @@ This sequence diagram illustrates the communication flow between the autonomous 
 | [Behaviour Planning](https://git.hs-coburg.de/ADAPT/adapt_behplan.git) | Amod Patil |
 | [Lateral and Longitudinal Control](https://git.hs-coburg.de/ADAPT/adapt_latlongcon.git) |Anish Patil |
 | [EV Transceiver](https://git.hs-coburg.de/ADAPT/adapt_envmod.git) | Harsh Patil & Anish Patil |
+| [Object Detection](https://git.hs-coburg.de/ADAPT/adapt_obj) | Ritwik Ranjit, Harshwardhan Patil & Amod Patil|
 | [Infrastructure Transceiver](https://git.hs-coburg.de/ADAPT/adapt_inf_trans.git)  | Swati Upadhyay |
 | [Parking Spot Updater](https://git.hs-coburg.de/ADAPT/adapt_inf_spotupd.git) | Swati Upadhyay |
-| [Trajectory Planner](https://git.hs-coburg.de/ADAPT/adapt_trajp.git) | Anish Patil, Harsh Patil |
+| [Trajectory Planner](https://git.hs-coburg.de/ADAPT/adapt_trajp.git) | Anish Patil |
 | [Infrastructure Object Detection](https://git.hs-coburg.de/ADAPT/adapt_inf_spotupd.git) | Swati Upadhyay |
 | [Mobile Interface](https://git.hs-coburg.de/ADAPT/adapt_mobint.git) | Ritwik Ranjit |
 | [Spot Filter](https://git.hs-coburg.de/ADAPT/adapt_spot_filter.git) | Swati Upadhyay |
