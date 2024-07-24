@@ -52,10 +52,8 @@ This sequence diagram illustrates the communication flow between the autonomous 
 
 ## [Ego-Vehicle Block Diagram ](https://git.hs-coburg.de/ADAPT/adapt_main/raw/branch/main/images/Team%20Green%20-%20ADAPT%20%2812%29.jpg)
 <div align="center">
-<img src="https://git.hs-coburg.de/ADAPT/adapt_main/raw/branch/main/images/Team%20Green%20-%20ADAPT%20%2812%29.jpg" alt="Vehicle Interface" title="Vehicle Interface" width="1050" height="650">
+<img src="https://git.hs-coburg.de/ADAPT/adapt_main/raw/branch/main/images/Team%20Green%20-%20ADAPT%20%2814%29.jpg" alt="Vehicle Interface" title="Vehicle Interface" width="1050" height="450">
 </div>
-
-In this module we have updated our system architecture for both the Infrastructure and the EV. We have added parking spot updater and infrastructure’s transceiver to the system architecture of the Infrastructure. Similarly to the EV infrastructure we have shifted the parking spot selector to plan phase of the EV architecture and changed UI1 to vehicle interface and U2 to mobile interface.
 
 
 ## Component Responsibilities
