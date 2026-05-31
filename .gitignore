@@ -15,4 +15,5 @@ src/adapt_loc
 src/adapt_spotupd
 src/adapt_obj
 src/ros_deep_learning
-src/v2x
+src/v2xsrc/yasmin/
+src/ydlidar_ros2/
