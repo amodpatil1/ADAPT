@@ -43,28 +43,46 @@ This sequence diagram illustrates the communication flow between the autonomous 
 
 > :memo: **Note:** Diagram is named **Sequence Diagram** the `images` folder. 
 
-## Architecture 
+# Architecture
 
-## [Infrastructre Block Diagram ](https://git.hs-coburg.de/ADAPT/adapt_main/raw/branch/main/images/Team%20Green%20-%20ADAPT%20%2813%29.jpg)
-<div align="center">
-<img src="(https://github.com/amodpatil1/ADAPT/blob/main/images/Team%20Green%20-%20ADAPT%20(13).jpg)" alt="Vehicle Interface" title="Vehicle Interface" width="850" height="250">
-</div>
+## Infrastructure Block Diagram
 
-## [Ego-Vehicle Block Diagram ](https://git.hs-coburg.de/ADAPT/adapt_main/raw/branch/main/images/Team%20Green%20-%20ADAPT%20%2812%29.jpg)
-<div align="center">
-<img src="https://git.hs-coburg.de/ADAPT/adapt_main/raw/branch/main/images/Team%20Green%20-%20ADAPT%20%2814%29.jpg" alt="Vehicle Interface" title="Vehicle Interface" width="1050" height="450">
-</div>
-
-## [Story Map ](https://git.hs-coburg.de/ADAPT/adapt_main/raw/branch/main/images/Story%20Map.png)
-<div align="center">
-<img src="https://git.hs-coburg.de/ADAPT/adapt_main/raw/branch/main/images/Story%20Map.png" alt="Vehicle Interface" title="Vehicle Interface" width="1050" height="450">
-</div>
-
-## [Milestones ](https://git.hs-coburg.de/ADAPT/adapt_main/raw/branch/main/images/Team%20Green%20-%20ADAPT%20%2815%29.jpg)
+[View Full Image](https://raw.githubusercontent.com/amodpatil1/ADAPT/main/images/Team%20Green%20-%20ADAPT%20%2813%29.jpg)
 
 <div align="center">
-<img src="https://git.hs-coburg.de/ADAPT/adapt_main/raw/branch/main/images/Team%20Green%20-%20ADAPT%20%2815%29.jpg" alt="Vehicle Interface" title="Vehicle Interface" width="1050" height="450">
+<img src="https://raw.githubusercontent.com/amodpatil1/ADAPT/main/images/Team%20Green%20-%20ADAPT%20%2813%29.jpg" alt="Infrastructure Block Diagram" title="Infrastructure Block Diagram" width="850" height="250">
 </div>
+
+---
+
+## Ego-Vehicle Block Diagram
+
+[View Full Image](https://raw.githubusercontent.com/amodpatil1/ADAPT/main/images/Team%20Green%20-%20ADAPT%20%2814%29.jpg)
+
+<div align="center">
+<img src="https://raw.githubusercontent.com/amodpatil1/ADAPT/main/images/Team%20Green%20-%20ADAPT%20%2814%29.jpg" alt="Ego-Vehicle Block Diagram" title="Ego-Vehicle Block Diagram" width="1050" height="450">
+</div>
+
+---
+
+## Story Map
+
+[View Full Image](https://raw.githubusercontent.com/amodpatil1/ADAPT/main/images/Story%20Map.png)
+
+<div align="center">
+<img src="https://raw.githubusercontent.com/amodpatil1/ADAPT/main/images/Story%20Map.png" alt="Story Map" title="Story Map" width="1050" height="450">
+</div>
+
+---
+
+## Milestones
+
+[View Full Image](https://raw.githubusercontent.com/amodpatil1/ADAPT/main/images/Team%20Green%20-%20ADAPT%20%2815%29.jpg)
+
+<div align="center">
+<img src="https://raw.githubusercontent.com/amodpatil1/ADAPT/main/images/Team%20Green%20-%20ADAPT%20%2815%29.jpg" alt="Milestones" title="Milestones" width="1050" height="450">
+</div>
+
 
 
 ## Functionalities
