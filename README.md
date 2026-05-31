@@ -200,4 +200,3 @@ ros2 launch realsense2_camera rs_launch.py
 ```bash
     ros2 launch ros_deep_learning detectnet.ros2.launch
 ```
-> :memo: **Note:** Maintainer: **TEAM ADAPT**. 
