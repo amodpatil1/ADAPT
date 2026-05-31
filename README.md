@@ -47,7 +47,7 @@ This sequence diagram illustrates the communication flow between the autonomous 
 
 ## [Infrastructre Block Diagram ](https://git.hs-coburg.de/ADAPT/adapt_main/raw/branch/main/images/Team%20Green%20-%20ADAPT%20%2813%29.jpg)
 <div align="center">
-<img src="https://git.hs-coburg.de/ADAPT/adapt_main/raw/branch/main/images/Team%20Green%20-%20ADAPT%20%2813%29.jpg" alt="Vehicle Interface" title="Vehicle Interface" width="850" height="250">
+<img src="(https://github.com/amodpatil1/ADAPT/blob/main/images/Team%20Green%20-%20ADAPT%20(13).jpg)" alt="Vehicle Interface" title="Vehicle Interface" width="850" height="250">
 </div>
 
 ## [Ego-Vehicle Block Diagram ](https://git.hs-coburg.de/ADAPT/adapt_main/raw/branch/main/images/Team%20Green%20-%20ADAPT%20%2812%29.jpg)
